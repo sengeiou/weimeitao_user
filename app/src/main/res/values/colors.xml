@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="rc_main_theme">#0195ff</color>
+    <color name="colorTheme">#368900</color>
+    <color name="white">#ffffff</color>
+
+    <!--分割线-->
+    <color name="line">#f3f5f7</color>
+    <!--222222文字-->
+    <color name="t222222">#222222</color>
+    <color name="t999999">#999999</color>
+    <color name="color333">#333333</color>
+    <color name="color77White">#aaffffff</color>
+
+    <color name="navpage">#FFE1E8EB</color>
+    <color name="colorTextAssistant">#888888</color>
+    <color name="colorB1">#b1b1b1</color>
+    <color name="colorB7">#b7b7b7</color>
+    <color name="colorF6">#f6f6f6</color>
+    <color name="colorF4F8FB">#F4F8FB</color>
+    <color name="colorFollowRed">#FF5B61</color>
+    <color name="colorFollowCCC">#CCCCCC</color>
+    <color name="colorFollowFenRed">#FFD9DA</color>
+    <color name="colorF3F5F7">#f3f5f7</color>
+    <color name="colorF7F9FC">#f8f9fc</color>
+    <color name="colorD7D7D7">#D7D7D7</color>
+    <color name="colorEBEBEB">#EBEBEB</color>
+    <color name="colorWmGreen">#368900</color>
+    <color name="colorWmDivider">#E8e8e8</color>
+</resources>

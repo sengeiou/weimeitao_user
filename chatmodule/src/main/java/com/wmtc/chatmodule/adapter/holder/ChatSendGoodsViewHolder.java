@@ -1,0 +1,58 @@
+package com.wmtc.chatmodule.adapter.holder;
+
+import android.os.Handler;
+import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.TextView;
+
+import com.bumptech.glide.Glide;
+import com.jude.easyrecyclerview.adapter.BaseViewHolder;
+import com.wmtc.chatmodule.R;
+import com.wmtc.chatmodule.adapter.ChatAdapter;
+import com.wmtc.chatmodule.enity.MessageInfo;
+
+import top.jplayer.baseprolibrary.glide.GlideUtils;
+import top.jplayer.baseprolibrary.utils.StringUtils;
+
+/**
+ * Created by Obl on 2019/4/27.
+ * jiguang.chat.activity.adapter.holder
+ * call me : jplayer_top@163.com
+ * github : https://github.com/oblivion0001
+ */
+public class ChatSendGoodsViewHolder extends BaseViewHolder<MessageInfo> {
+    ViewGroup parent;
+    ChatAdapter.onItemClickListener onItemClickListener;
+    Handler handler;
+    public TextView mTvTitle;
+    public TextView mTvMoney;
+    public ImageView mIvSrc;
+    public TextView mTvSend;
+
+    public ChatSendGoodsViewHolder(ViewGroup parent, ChatAdapter.onItemClickListener onItemClickListener, Handler handler) {
+        super(parent, R.layout.item_chat_send_goods);
+        this.parent = parent;
+        this.onItemClickListener = onItemClickListener;
+        this.handler = handler;
+        mTvTitle = itemView.findViewById(R.id.tvTitle);
+        mTvMoney = itemView.findViewById(R.id.tvMoney);
+        mIvSrc = itemView.findViewById(R.id.ivSrc);
+        mTvSend = itemView.findViewById(R.id.tvSend);
+    }
+
+    @Override
+    public void setData(MessageInfo data) {
+        super.setData(data);
+        Glide.with(getContext())
+                .load(data.getImageUrl())
+                .apply(GlideUtils.init().roundTransFrom(mIvSrc.getContext(), 5, R.drawable.wmt_default))
+                .into(mIvSrc);
+        mTvTitle.setText(StringUtils.init().fixNullStr(data.getContent()));
+        mTvMoney.setText(StringUtils.init().fixNullStr(data.getHeader()));
+        mTvSend.setOnClickListener(v -> {
+            if (onItemClickListener != null) {
+                onItemClickListener.onImageClick(mTvSend, getDataPosition());
+            }
+        });
+    }
+}

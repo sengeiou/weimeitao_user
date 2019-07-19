@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dimen_50dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_50dp"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:paddingStart="@dimen/dimen_10dp"
+        android:paddingEnd="@dimen/dimen_10dp">
+
+        <top.jplayer.baseprolibrary.widgets.polygon.PolygonImageView
+            android:id="@+id/ivDialogCommentAvatar"
+            android:layout_width="30dp"
+            android:layout_height="@dimen/dimen_30dp"
+            android:src="@drawable/wm_avatar"
+            app:poly_vertices="0"/>
+
+        <EditText
+            android:id="@+id/edDialogInput"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dimen_30dp"
+            android:layout_marginStart="@dimen/dimen_10dp"
+            android:layout_weight="1"
+            android:background="@drawable/shape_f7f9fc"
+            android:drawableStart="@drawable/forum_edit"
+            android:drawablePadding="@dimen/dimen_10dp"
+            android:gravity="center_vertical"
+            android:hint="说点什么......"
+            android:imeOptions="actionSend"
+            android:inputType="text"
+            android:paddingStart="@dimen/dimen_10dp"
+            android:paddingEnd="@dimen/dimen_10dp"
+            android:singleLine="true"
+            android:textColor="@color/color999"
+            android:textColorHint="@color/color999"
+            android:textSize="@dimen/dimen_11sp"/>
+
+    </LinearLayout>
+</LinearLayout>

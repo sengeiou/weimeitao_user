@@ -1,0 +1,7 @@
+include ':app',
+        ':baseprolibrary',
+        ':chatmodule', ':lansongsdk',
+        ':videoRecorded',
+        ':locationlibrary',
+        ':networklibrary',
+        ':autocode'

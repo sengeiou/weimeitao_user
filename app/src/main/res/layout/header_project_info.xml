@@ -1,0 +1,360 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <cn.bingoogolapple.bgabanner.BGABanner
+        android:id="@+id/banner"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:banner_contentBottomMargin="-20dp"
+        app:banner_indicatorGravity="bottom"
+        app:banner_pointContainerBackground="@color/trans"
+        app:banner_pointDrawable="@color/trans"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/tvPos"
+        android:layout_width="@dimen/dimen_40dp"
+        android:layout_height="@dimen/dimen_22dp"
+        android:layout_margin="@dimen/dimen_15dp"
+        android:layout_marginBottom="@dimen/dimen_15dp"
+        android:alpha="0.8"
+        android:background="@drawable/shape_45_theme_gray_all"
+        android:text="1/3"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/banner"
+        app:layout_constraintEnd_toEndOf="@+id/banner"/>
+
+    <TextView
+        android:id="@+id/tvProName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dimen_10dp"
+        android:layout_marginTop="@dimen/dimen_20dp"
+        android:layout_marginEnd="@dimen/dimen_10dp"
+        android:gravity="center_vertical"
+        android:maxLines="2"
+        android:text="@string/app_name"
+        android:textSize="@dimen/dimen_18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/banner"/>
+
+    <TextView
+        android:id="@+id/tvShopName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dimen_10dp"
+        android:layout_marginTop="@dimen/dimen_10dp"
+        android:layout_marginEnd="@dimen/dimen_10dp"
+        android:gravity="center_vertical"
+        android:text="@string/app_name"
+        android:textColor="@color/color666"
+        android:textSize="@dimen/dimen_12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvProName"/>
+
+    <com.zhy.view.flowlayout.TagFlowLayout
+        android:id="@+id/flowLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dimen_10dp"
+        android:layout_marginTop="@dimen/dimen_5dp"
+        android:layout_marginEnd="@dimen/dimen_10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvShopName"/>
+
+    <View
+        android:id="@+id/view1"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginStart="@dimen/dimen_10dp"
+        android:layout_marginTop="@dimen/dimen_5dp"
+        android:layout_marginEnd="@dimen/dimen_10dp"
+        android:background="@drawable/shape_divider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/flowLayout"/>
+
+    <LinearLayout
+        android:id="@+id/llTip"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dimen_10dp"
+        android:layout_marginTop="@dimen/dimen_15dp"
+        android:layout_marginEnd="@dimen/dimen_10dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view1">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/pro_ok"
+            android:drawablePadding="@dimen/dimen_3dp"
+            android:text="安全保障"
+            android:textSize="@dimen/dimen_12sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_30dp"
+            android:drawableStart="@drawable/pro_ok"
+            android:drawablePadding="@dimen/dimen_3dp"
+            android:text="随时退"
+            android:textSize="@dimen/dimen_12sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_30dp"
+            android:drawableStart="@drawable/pro_ok"
+            android:drawablePadding="@dimen/dimen_3dp"
+            android:text="护理保障"
+            android:textSize="@dimen/dimen_12sp"/>
+    </LinearLayout>
+
+    <View
+        android:id="@+id/view2"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginStart="@dimen/dimen_10dp"
+        android:layout_marginTop="@dimen/dimen_15dp"
+        android:layout_marginEnd="@dimen/dimen_10dp"
+        android:background="@drawable/shape_divider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/llTip"/>
+
+    <TextView
+        android:id="@+id/tvShopLocal"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dimen_10dp"
+        android:layout_marginTop="@dimen/dimen_15dp"
+        android:layout_marginEnd="@dimen/dimen_50dp"
+        android:ellipsize="end"
+        android:gravity="center_vertical"
+        android:maxLines="2"
+        android:text="市北区徐州北路13-2号利群宇恒大厦"
+        android:textSize="@dimen/dimen_14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view2"/>
+
+    <ImageView
+        android:id="@+id/ivChat"
+        android:layout_width="@dimen/dimen_25dp"
+        android:layout_height="@dimen/dimen_25dp"
+        android:layout_marginTop="@dimen/dimen_15dp"
+        android:layout_marginEnd="@dimen/dimen_15dp"
+        android:src="@drawable/order_chat"
+        android:visibility="invisible"
+        android:tint="@color/color666"
+        app:layout_constraintBottom_toBottomOf="@+id/tvShopLocal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view2"/>
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="10dp"
+        android:layout_marginTop="@dimen/dimen_15dp"
+        android:background="@drawable/shape_divider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvShopLocal"/>
+
+    <TextView
+        android:id="@+id/tvTipPro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dimen_10dp"
+        android:layout_marginTop="@dimen/dimen_40dp"
+        android:paddingBottom="@dimen/dimen_10dp"
+        android:text="项目信息"
+        android:textSize="@dimen/dimen_16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvShopLocal"/>
+
+    <LinearLayout
+        android:id="@+id/llProText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingStart="@dimen/dimen_10dp"
+        android:paddingEnd="@dimen/dimen_10dp"
+        android:paddingBottom="@dimen/dimen_20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTipPro">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="@dimen/dimen_60dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/dimen_15dp"
+                android:gravity="center_vertical"
+                android:text="部位"
+                android:textColor="@color/color999"/>
+
+            <TextView
+                android:id="@+id/tvPlace"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="脸部"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_20dp">
+
+            <TextView
+                android:layout_width="@dimen/dimen_60dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/dimen_15dp"
+                android:gravity="center_vertical"
+                android:text="项目功效"
+                android:textColor="@color/color999"/>
+
+            <TextView
+                android:id="@+id/tvXMGX"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:lines="1"
+                android:text="美白换肤、重金属去皱"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_20dp">
+
+            <TextView
+                android:layout_width="@dimen/dimen_60dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/dimen_15dp"
+                android:gravity="center_vertical"
+                android:text="使用产品"
+                android:textColor="@color/color999"/>
+
+            <TextView
+                android:id="@+id/tvSYCP"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:lines="1"
+                android:text="如妃黄金焕肤"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_20dp">
+
+            <TextView
+                android:layout_width="@dimen/dimen_60dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/dimen_15dp"
+                android:gravity="center_vertical"
+                android:text="配合仪器"
+                android:textColor="@color/color999"/>
+
+            <TextView
+                android:id="@+id/tvPHYQ"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:lines="1"
+                android:text="无"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_20dp">
+
+            <TextView
+                android:layout_width="@dimen/dimen_60dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/dimen_15dp"
+                android:gravity="center_vertical"
+                android:text="服务流程"
+                android:textColor="@color/color999"/>
+
+            <TextView
+                android:id="@+id/tvFWLC"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:text="免费皮肤检测"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_20dp">
+
+            <TextView
+                android:layout_width="@dimen/dimen_60dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/dimen_15dp"
+                android:gravity="center_vertical"
+                android:text="增值服务"
+                android:textColor="@color/color999"/>
+
+            <TextView
+                android:id="@+id/tvZZFW"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:text="免费皮肤检测"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:id="@+id/view3"
+        android:layout_width="0dp"
+        android:layout_height="10dp"
+        android:layout_marginTop="@dimen/dimen_15dp"
+        android:background="@drawable/shape_divider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/llProText"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_50dp"
+        android:layout_marginStart="@dimen/dimen_10dp"
+        android:gravity="center_vertical"
+        android:text="项目介绍"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/view3"/>
+</android.support.constraint.ConstraintLayout>
+
+

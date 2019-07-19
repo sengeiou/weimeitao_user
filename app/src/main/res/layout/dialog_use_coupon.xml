@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="400dp"
+    android:background="@color/white">
+
+    <TextView
+        android:id="@+id/tvCouponUse"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/dimen_50dp"
+        android:enabled="false"
+        android:text="可使用优惠券(2)"
+        android:textColor="@drawable/select_text_color_gray_black"
+        app:layout_constraintEnd_toStartOf="@+id/tvCouponNotUse"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/tvCouponNotUse"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/dimen_50dp"
+        android:enabled="true"
+        android:text="不可使用优惠券(2)"
+        android:textColor="@drawable/select_text_color_gray_black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tvCouponUse"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:layout_width="0dp"
+        android:layout_height="300dp"
+        app:layout_constraintBottom_toTopOf="@+id/tvSure"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvCouponNotUse"
+        app:srlEnablePreviewInEditMode="true"
+        app:srlPrimaryColor="@color/white">
+
+        <com.scwang.smartrefresh.layout.header.FalsifyHeader
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <top.jplayer.baseprolibrary.widgets.MultipleStatusView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:emptyView="@layout/layout_empty_view"
+            app:errorView="@layout/layout_error_view"
+            app:loadingView="@layout/layout_loading_view"
+            app:noNetworkView="@layout/layout_network_view">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+        </top.jplayer.baseprolibrary.widgets.MultipleStatusView>
+
+        <com.scwang.smartrefresh.layout.footer.FalsifyFooter
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+    <View
+        android:layout_width="0dp"
+        android:layout_height="@dimen/dimen_1dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:background="@color/divider_line"
+        app:layout_constraintTop_toBottomOf="@+id/tvCouponNotUse"/>
+    <TextView
+        android:id="@+id/tvSure"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/dimen_50dp"
+        android:background="@drawable/btn_pro"
+        android:gravity="center_horizontal"
+        android:paddingTop="@dimen/dimen_5dp"
+        android:text="确  认"
+        android:textColor="@color/white"
+        android:textSize="@dimen/dimen_18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+        android:id="@+id/tvDelMoney"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dimen_5dp"
+        android:text="（共省￥0.00）"
+        android:textColor="@color/white"
+        android:textSize="@dimen/dimen_12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/tvSure"
+        app:layout_constraintEnd_toEndOf="@+id/tvSure"
+        app:layout_constraintStart_toStartOf="@+id/tvSure"/>
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="90px"
+        android:id="@+id/relativeLayout"
+        android:background="#cfcfcf">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="商家"
+            android:gravity="center|left|bottom"
+            android:layout_marginLeft="30px"
+            android:textColor="#ffffff"
+            android:textSize="42px"
+            android:id="@+id/tv_shop" />
+        <TextView
+            android:id="@+id/tv_dongtai"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="30px"
+            android:text="动态"
+            android:gravity="center|left|bottom"
+            android:textColor="#ffffff"
+            android:textSize="42px"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/tv_shop"
+            android:layout_toEndOf="@+id/tv_shop" />
+        <TextView
+            android:id="@+id/tv_attention"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="关注"
+            android:textColor="#ffffff"
+            android:textSize="36px"
+            android:layout_centerVertical="true"
+            android:background="@drawable/btn_attention"
+            android:paddingRight="20px"
+            android:paddingLeft="20px"
+            android:layout_marginRight="30px"
+            android:visibility="gone"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

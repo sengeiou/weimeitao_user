@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/dimen_5dp"
+    android:gravity="center">
+
+    <TextView
+        android:id="@+id/tvHot"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:ellipsize="end"
+        android:lines="1"
+        android:maxEms="7"
+        android:textStyle="bold"
+        android:paddingTop="@dimen/dimen_7dp"
+        android:paddingBottom="@dimen/dimen_7dp"
+        android:text="美白淡斑"
+        android:textColor="@drawable/selector_text_333_theme_select"
+        android:textSize="@dimen/dimen_14sp"/>
+</LinearLayout>
+

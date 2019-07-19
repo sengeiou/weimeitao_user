@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <View
+        android:id="@+id/communityBar"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/white"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_45dp"
+        android:gravity="bottom">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tvFollows"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginStart="@dimen/dimen_15dp"
+                android:text="关注"
+                android:textColor="@color/color999"
+                android:textSize="@dimen/dimen_14sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/tvScans"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginStart="@dimen/dimen_15dp"
+                android:text="推荐"
+                android:textSize="@dimen/dimen_30sp"
+                android:textStyle="bold"/>
+
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"/>
+
+        <FrameLayout
+            android:layout_width="@dimen/dimen_31dp"
+            android:layout_height="@dimen/dimen_31dp"
+            android:layout_marginEnd="@dimen/dimen_10dp"
+            android:layout_marginBottom="@dimen/dimen_5dp"
+            android:background="@drawable/shape_follow_red_cir"
+            android:paddingLeft="0.5dp"
+            android:paddingTop="0.5dp">
+
+            <top.jplayer.baseprolibrary.widgets.polygon.PolygonImageView
+                android:id="@+id/ivAvatar"
+                android:layout_width="@dimen/dimen_30dp"
+                android:layout_height="@dimen/dimen_30dp"
+                android:src="@drawable/wm_avatar"
+                app:poly_border="true"
+                app:poly_border_color="@color/white"
+                app:poly_border_width="@dimen/dimen_2dp"
+                app:poly_vertices="0"/>
+        </FrameLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:id="@+id/llSearchAndScan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_50dp"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:id="@+id/ivScan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dimen_10dp"
+                    android:padding="@dimen/dimen_5dp"
+                    android:src="@drawable/saoyisao"/>
+
+
+                <TextView
+                    android:id="@+id/editSearch"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen_35dp"
+                    android:layout_marginStart="@dimen/dimen_10dp"
+                    android:layout_marginEnd="@dimen/dimen_10dp"
+                    android:background="@drawable/search_bar_gray"
+                    android:drawableStart="@drawable/main_search"
+                    android:drawablePadding="@dimen/dimen_5dp"
+                    android:gravity="center_vertical"
+                    android:hint="搜索合辑、心得、用户"
+                    android:paddingStart="@dimen/dimen_10dp"
+                    android:paddingEnd="@dimen/dimen_5dp"
+                    android:singleLine="true"
+                    android:textColorHint="@color/color999"
+                    android:textSize="@dimen/dimen_12sp"/>
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scaleType="centerCrop"
+                android:src="@drawable/toolbar_shadow"/>
+        </LinearLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <FrameLayout
+                android:id="@+id/flFollows"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white">
+
+
+                <com.scwang.smartrefresh.layout.SmartRefreshLayout
+                    android:id="@+id/smartRefreshLayoutFollow"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:srlEnablePreviewInEditMode="true"
+                    app:srlPrimaryColor="@color/white">
+
+                    <com.scwang.smartrefresh.layout.header.ClassicsHeader
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+
+                    <top.jplayer.baseprolibrary.widgets.MultipleStatusView
+                        android:id="@+id/multipleStatusViewFollow"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:emptyView="@layout/layout_empty_follow"
+                        app:errorView="@layout/layout_error_view"
+                        app:loadingView="@layout/layout_loading_view"
+                        app:noNetworkView="@layout/layout_network_view">
+
+                        <android.support.v7.widget.RecyclerView
+                            android:id="@+id/recyclerViewFollow"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"/>
+
+                    </top.jplayer.baseprolibrary.widgets.MultipleStatusView>
+
+                    <com.scwang.smartrefresh.layout.footer.ClassicsFooter
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/flScan"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <com.scwang.smartrefresh.layout.SmartRefreshLayout
+                    android:id="@+id/smartRefreshLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:srlEnablePreviewInEditMode="true"
+                    app:srlPrimaryColor="#f3f3f3">
+
+                    <com.scwang.smartrefresh.layout.header.ClassicsHeader
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                    <top.jplayer.baseprolibrary.widgets.MultipleStatusView
+                        android:id="@+id/multipleStatusView"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:emptyView="@layout/layout_empty_view"
+                        app:errorView="@layout/layout_error_view"
+                        app:loadingView="@layout/layout_loading_view"
+                        app:noNetworkView="@layout/layout_network_view">
+
+                        <android.support.v7.widget.RecyclerView
+                            android:id="@+id/recyclerView"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="#f3f3f3"/>
+                    </top.jplayer.baseprolibrary.widgets.MultipleStatusView>
+
+                    <com.scwang.smartrefresh.layout.footer.ClassicsFooter
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#f3f3f3"/>
+                </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+                <ImageView
+                    android:id="@+id/ivSend"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|end"
+                    android:layout_marginBottom="@dimen/dimen_20dp"
+                    android:src="@drawable/btn_send"/>
+            </FrameLayout>
+
+
+        </FrameLayout>
+
+
+    </LinearLayout>
+
+</LinearLayout>

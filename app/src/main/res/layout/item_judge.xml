@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/dimen_10dp"
+    android:background="@color/white">
+
+    <top.jplayer.baseprolibrary.widgets.polygon.PolygonImageView
+        android:id="@+id/im_user_pic"
+        android:layout_width="@dimen/dimen_30dp"
+        android:layout_height="@dimen/dimen_30dp"
+        android:layout_below="@+id/tv_typj"
+        android:layout_marginLeft="@dimen/dimen_10dp"
+        android:layout_marginTop="@dimen/dimen_10dp"
+        app:poly_vertices="0" />
+
+    <TextView
+        android:id="@+id/tv_user_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_typj"
+        android:layout_marginLeft="@dimen/dimen_10dp"
+        android:layout_marginTop="@dimen/dimen_10dp"
+        android:layout_toRightOf="@+id/im_user_pic"
+        android:textColor="@color/color222222"
+        android:textSize="@dimen/dimen_14sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tv_user_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_user_name"
+        android:layout_marginLeft="@dimen/dimen_10dp"
+        android:layout_toRightOf="@+id/im_user_pic"
+        android:textColor="@color/color666666"
+        android:textSize="@dimen/dimen_10sp" />
+
+    <TextView
+        android:id="@+id/tv_user_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_user_time"
+        android:layout_marginLeft="@dimen/dimen_10dp"
+        android:layout_marginTop="@dimen/dimen_10dp"
+        android:layout_marginRight="@dimen/dimen_10dp"
+        android:layout_marginBottom="@dimen/dimen_10dp"
+        android:layout_toRightOf="@+id/im_user_pic"
+        android:gravity="left"
+        android:textColor="@color/color666666"
+        android:textSize="@dimen/dimen_12sp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_1dp"
+        android:layout_below="@+id/tv_user_content"
+        android:layout_marginLeft="@dimen/dimen_10dp"
+        android:layout_marginRight="@dimen/dimen_10dp"
+        android:background="@color/line"></RelativeLayout>
+
+</RelativeLayout>

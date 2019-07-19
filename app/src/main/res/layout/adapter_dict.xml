@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/tvHot"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:minWidth="@dimen/dimen_80dp"
+    android:layout_margin="5dp"
+    android:background="@drawable/select_dict_server"
+    android:ellipsize="end"
+    android:lines="1"
+    android:paddingStart="@dimen/dimen_15dp"
+    android:paddingTop="@dimen/dimen_7dp"
+    android:paddingEnd="@dimen/dimen_15dp"
+    android:paddingBottom="@dimen/dimen_7dp"
+    android:text="美白淡斑"
+    android:textColor="@drawable/selector_text_333_theme_check"
+    android:textSize="@dimen/dimen_14sp"/>

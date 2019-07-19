@@ -1,0 +1,101 @@
+package com.wmtc.wmt.forum.presenter;
+
+import com.alibaba.sdk.android.oss.ClientConfiguration;
+import com.alibaba.sdk.android.oss.OSSClient;
+import com.alibaba.sdk.android.oss.common.auth.OSSCredentialProvider;
+import com.alibaba.sdk.android.oss.common.auth.OSSFederationCredentialProvider;
+import com.alibaba.sdk.android.oss.common.auth.OSSFederationToken;
+import com.wmtc.wmt.appoint.bean.DictListBean;
+import com.wmtc.wmt.appoint.pojo.DictCodePojo;
+import com.wmtc.wmt.base.BaseBean;
+import com.wmtc.wmt.base.CommonModel;
+import com.wmtc.wmt.base.DefaultCallBackObserver;
+import com.wmtc.wmt.base.WmtApplication;
+import com.wmtc.wmt.base.WmtServer;
+import com.wmtc.wmt.forum.activity.ReportActivity;
+import com.wmtc.wmt.forum.bean.OSSBean;
+import com.wmtc.wmt.forum.pojo.AccusationPojo;
+
+import top.jplayer.baseprolibrary.mvp.contract.BasePresenter;
+import top.jplayer.baseprolibrary.net.tip.LoaddingErrorImplTip;
+
+import static cn.jpush.im.android.api.jmrtc.JMRTCInternalUse.getApplicationContext;
+import static com.wmtc.wmt.base.WmtApplication.ENDPOINT;
+
+/**
+ * Created by Obl on 2019/6/24.
+ * com.wmtc.wmt.forum.presenter
+ * call me : jplayer_top@163.com
+ * github : https://github.com/oblivion0001
+ */
+public class ReportPresenter extends BasePresenter<ReportActivity> {
+
+    private final CommonModel mModel;
+
+    public ReportPresenter(ReportActivity iView) {
+        super(iView);
+        mModel = new CommonModel(WmtServer.class);
+    }
+
+    public void ossToken() {
+        mModel.ossToken().subscribe(new DefaultCallBackObserver<OSSBean>(this) {
+            @Override
+            public void responseSuccess(OSSBean bean) {
+                OSSBean.DataBean mBean = bean.data;
+                OSSCredentialProvider credentialProvider = new OSSFederationCredentialProvider() {
+
+                    @Override
+                    public OSSFederationToken getFederationToken() {
+                        return new OSSFederationToken(mBean.AccessKeyId, mBean.AccessKeySecret, mBean.SecurityToken, mBean.Expiration);
+                    }
+                };
+                ClientConfiguration conf = new ClientConfiguration();
+                conf.setConnectionTimeout(15 * 1000); // 连接超时，默认15秒
+                conf.setSocketTimeout(15 * 1000); // socket超时，默认15秒
+                conf.setMaxConcurrentRequest(9); // 最大并发请求书，默认5个
+                conf.setMaxErrorRetry(2); // 失败后最大重试次数，默认2次
+                OSSClient mOss = new OSSClient(getApplicationContext(), ENDPOINT, credentialProvider, conf);
+                mIView.ossClient(mOss);
+            }
+
+            @Override
+            public void responseFail(OSSBean proListBean) {
+
+            }
+        });
+    }
+
+    public void accusation() {
+        DictCodePojo dictCodePojo = new DictCodePojo();
+        dictCodePojo.setCode("sys_accusation_article");
+        mModel.getxingqu(dictCodePojo).subscribe(new DefaultCallBackObserver<DictListBean>(this) {
+            @Override
+            public void responseSuccess(DictListBean bean) {
+                mIView.getList(bean);
+            }
+
+            @Override
+            public void responseFail(DictListBean bean) {
+
+            }
+        });
+    }
+
+    public void saveAccusation(AccusationPojo pojo) {
+        pojo.userId = WmtApplication.id;
+        mModel.saveAccusation(pojo).subscribe(new DefaultCallBackObserver<BaseBean>(new LoaddingErrorImplTip(mIView
+        ), this) {
+
+            @Override
+            public void responseSuccess(BaseBean baseBean) {
+                mIView.saveAccusation();
+            }
+
+            @Override
+            public void responseFail(BaseBean baseBean) {
+
+            }
+
+        });
+    }
+}

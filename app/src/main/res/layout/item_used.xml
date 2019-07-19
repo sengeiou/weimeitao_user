@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/rl_xm_xq"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_93dp"
+        android:layout_marginStart="@dimen/dimen_15dp"
+        android:layout_marginTop="@dimen/dimen_15dp"
+        android:layout_marginEnd="@dimen/dimen_15dp"
+        android:layout_marginBottom="@dimen/dimen_5dp"
+        app:cardCornerRadius="@dimen/dimen_7dp"
+        app:cardElevation="@dimen/dimen_1dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="@dimen/dimen_70dp"
+                android:layout_height="@dimen/dimen_60dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="@dimen/dimen_20dp"
+                android:background="@mipmap/yishiyong" />
+
+            <TextView
+                android:id="@+id/tv_money"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dimen_20dp"
+                android:layout_marginTop="@dimen/dimen_20dp"
+                android:textColor="@color/color222222"
+                android:textSize="@dimen/dimen_23sp" />
+
+            <TextView
+                android:id="@+id/tv_mk"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_money"
+                android:layout_alignStart="@+id/tv_money"
+                android:layout_alignEnd="@+id/tv_money"
+                android:layout_marginTop="@dimen/dimen_10dp"
+                android:layout_marginBottom="@dimen/dimen_20dp"
+                android:gravity="center"
+                android:textColor="@color/color222222"
+                android:textSize="@dimen/dimen_10sp" />
+
+            <View
+                android:id="@+id/v_1"
+                android:layout_width="@dimen/dimen_1dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dimen_20dp"
+                android:layout_marginTop="@dimen/dimen_5dp"
+                android:layout_marginBottom="@dimen/dimen_5dp"
+                android:layout_toEndOf="@+id/tv_money"
+                android:background="@color/line" />
+
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dimen_15dp"
+                android:layout_marginTop="@dimen/dimen_15dp"
+                android:layout_toEndOf="@+id/v_1"
+                android:textColor="@color/color222222"
+                android:textSize="@dimen/dimen_14sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_fw"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_name"
+                android:layout_marginStart="@dimen/dimen_15dp"
+                android:layout_marginTop="@dimen/dimen_10dp"
+                android:layout_marginEnd="@dimen/dimen_15dp"
+                android:layout_toEndOf="@+id/v_1"
+                android:gravity="left"
+                android:textColor="@color/color222222"
+                android:textSize="@dimen/dimen_10sp" />
+
+            <TextView
+                android:id="@+id/tv_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_fw"
+                android:layout_marginStart="@dimen/dimen_15dp"
+                android:layout_marginTop="@dimen/dimen_10dp"
+                android:layout_toEndOf="@+id/v_1"
+                android:textColor="@color/color222222"
+                android:textSize="@dimen/dimen_10sp" />
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+
+</LinearLayout>

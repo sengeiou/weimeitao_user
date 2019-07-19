@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/tvHot"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    android:background="@drawable/shape_dict_add"
+    android:drawableStart="@drawable/dict_add"
+    android:ellipsize="end"
+    android:lines="1"
+    android:minWidth="@dimen/dimen_80dp"
+    android:paddingStart="@dimen/dimen_15dp"
+    android:paddingTop="@dimen/dimen_7dp"
+    android:paddingEnd="@dimen/dimen_15dp"
+    android:paddingBottom="@dimen/dimen_7dp"
+    android:text="添加"
+    android:drawablePadding="@dimen/dimen_5dp"
+    android:textColor="@color/color999"
+    android:textSize="@dimen/dimen_14sp"/>

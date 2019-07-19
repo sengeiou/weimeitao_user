@@ -1,0 +1,56 @@
+ECLIPSE ANDROID PROJECT IMPORT SUMMARY
+======================================
+
+ * Project ShareSDK:D:\AndroidDemo\share\ShareSDK for
+   Android\Libs\MainLibs\.classpath:
+   Could not resolve source path src in project ShareSDK: ignored. The project
+   may not compile if the given source path provided source code.
+
+
+Ignored Files:
+--------------
+The following files were *not* copied into the new Gradle project; you
+should evaluate whether these are still needed in your project and if
+so manually move them:
+
+* build.xml
+* proguard-project.txt
+
+Moved Files:
+------------
+Android Gradle projects use a different directory structure than ADT
+Eclipse projects. Here's how the projects were restructured:
+
+* AndroidManifest.xml => shareSDK\src\main\AndroidManifest.xml
+* libs\MobCommons-2019.0306.1851.jar => shareSDK\libs\MobCommons-2019.0306.1851.jar
+* libs\MobTools-2019.0306.1850.jar => shareSDK\libs\MobTools-2019.0306.1850.jar
+* libs\SDKWrapper-2018.0801.1824.jar => shareSDK\libs\SDKWrapper-2018.0801.1824.jar
+* libs\ShareSDK-Alipay-3.5.0.jar => shareSDK\libs\ShareSDK-Alipay-3.5.0.jar
+* libs\ShareSDK-Alipay-Core-3.5.0.jar => shareSDK\libs\ShareSDK-Alipay-Core-3.5.0.jar
+* libs\ShareSDK-Alipay-Moments-3.5.0.jar => shareSDK\libs\ShareSDK-Alipay-Moments-3.5.0.jar
+* libs\ShareSDK-Core-3.5.0.jar => shareSDK\libs\ShareSDK-Core-3.5.0.jar
+* libs\ShareSDK-Douyin-3.5.0.jar => shareSDK\libs\ShareSDK-Douyin-3.5.0.jar
+* libs\ShareSDK-Meipai-3.5.0.jar => shareSDK\libs\ShareSDK-Meipai-3.5.0.jar
+* libs\ShareSDK-QQ-3.5.0.jar => shareSDK\libs\ShareSDK-QQ-3.5.0.jar
+* libs\ShareSDK-QZone-3.5.0.jar => shareSDK\libs\ShareSDK-QZone-3.5.0.jar
+* libs\ShareSDK-SinaWeibo-3.5.0.jar => shareSDK\libs\ShareSDK-SinaWeibo-3.5.0.jar
+* libs\ShareSDK-Wechat-3.5.0.jar => shareSDK\libs\ShareSDK-Wechat-3.5.0.jar
+* libs\ShareSDK-Wechat-Core-3.5.0.jar => shareSDK\libs\ShareSDK-Wechat-Core-3.5.0.jar
+* libs\ShareSDK-Wechat-Favorite-3.5.0.jar => shareSDK\libs\ShareSDK-Wechat-Favorite-3.5.0.jar
+* libs\ShareSDK-Wechat-Moments-3.5.0.jar => shareSDK\libs\ShareSDK-Wechat-Moments-3.5.0.jar
+* res\ => shareSDK\src\main\res\
+
+Next Steps:
+-----------
+You can now build the project. The Gradle project needs network
+connectivity to download dependencies.
+
+Bugs:
+-----
+If for some reason your project does not build, and you determine that
+it is due to a bug or limitation of the Eclipse to Gradle importer,
+please file a bug at http://b.android.com with category
+Component-Tools.
+
+(This import summary is for your information only, and can be deleted
+after import once you are satisfied with the results.)

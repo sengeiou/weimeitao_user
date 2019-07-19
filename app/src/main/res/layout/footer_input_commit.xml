@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:focusableInTouchMode="true"
+    android:focusable="true"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+
+    <EditText
+        android:layout_marginTop="@dimen/dimen_10dp"
+        android:id="@+id/editResume"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_125dp"
+        android:background="@null"
+        android:gravity="start"
+        android:hint="请输入原因描述"
+        android:minHeight="@dimen/dimen_110dp"
+        android:padding="@dimen/dimen_10dp"
+        android:textColor="@color/color999"
+        android:textColorHint="@color/color999"
+        android:textSize="@dimen/dimen_12sp"/>
+
+    <TextView
+        android:id="@+id/tvCommit"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_50dp"
+        android:background="@drawable/btn_pro"
+        android:text="确  认"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:textColor="@color/white"
+        android:textSize="@dimen/dimen_16sp"
+        android:textStyle="bold"/>
+</LinearLayout>

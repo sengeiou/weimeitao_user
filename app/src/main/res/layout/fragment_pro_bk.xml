@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/smartRefreshLayoutMatch"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:srlEnablePreviewInEditMode="true"
+        app:srlPrimaryColor="@color/white">
+
+        <com.scwang.smartrefresh.layout.header.FalsifyHeader
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dimen_25dp"
+                android:orientation="vertical"
+                android:paddingTop="@dimen/dp_20">
+
+                <LinearLayout
+                    android:id="@+id/llBanner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <android.support.v7.widget.CardView
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dimen_10dp"
+                        android:layout_marginEnd="@dimen/dimen_10dp"
+                        app:cardCornerRadius="@dimen/dimen_10dp"
+                        app:cardElevation="0.1dp">
+
+                        <cn.bingoogolapple.bgabanner.BGABanner
+                            android:id="@+id/banner"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dimen_130dp"
+                            app:banner_isNumberIndicator="false"
+                            app:banner_numberIndicatorBackground="@color/trans"
+                            app:banner_pointAutoPlayAble="true"
+                            app:banner_pointContainerBackground="@color/trans"
+                            app:banner_pointDrawable="@drawable/selector_point_banner_red_white"/>
+                    </android.support.v7.widget.CardView>
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="-105dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/wm_shadow"/>
+                </LinearLayout>
+
+
+                <com.flyco.tablayout.SlidingTabLayout
+                    android:id="@+id/tabLayoutChild"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dimen_40dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:tl_divider_padding="@dimen/dimen_10dp"
+                    app:tl_divider_width="1px"
+                    app:tl_indicator_color="@color/colorFollowRed"
+                    app:tl_indicator_width="@dimen/dimen_30dp"
+                    app:tl_tab_padding="@dimen/dimen_10dp"
+                    app:tl_textBold="BOTH"
+                    app:tl_textSelectColor="@color/black"
+                    app:tl_textUnselectColor="@color/color999"
+                    app:tl_textsize="@dimen/dimen_14sp"/>
+
+                <top.jplayer.baseprolibrary.widgets.NoScrollViewPager
+                    android:id="@+id/viewPager"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+                <include layout="@layout/footer_pro_bk"/>
+
+            </LinearLayout>
+        </ScrollView>
+
+        <com.scwang.smartrefresh.layout.footer.FalsifyFooter
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+</FrameLayout>

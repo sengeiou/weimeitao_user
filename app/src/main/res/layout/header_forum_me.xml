@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        app:layout_scrollFlags="scroll|enterAlways">
+
+        <TextView
+            android:id="@+id/tvMeName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_15dp"
+            android:layout_marginTop="@dimen/dimen_10dp"
+            android:layout_marginEnd="@dimen/dimen_15dp"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:lines="1"
+            android:text="@string/app_name"
+            android:textSize="@dimen/dimen_30sp"
+            android:textStyle="bold"
+            android:visibility="gone"
+            app:layout_constraintEnd_toStartOf="@+id/ivMeAvatar"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <top.jplayer.baseprolibrary.widgets.polygon.PolygonImageView
+            android:id="@+id/ivMeAvatar"
+            android:layout_width="@dimen/dimen_80dp"
+            android:layout_height="@dimen/dimen_80dp"
+            android:layout_marginStart="@dimen/dimen_15dp"
+            android:layout_marginTop="@dimen/dimen_10dp"
+            android:src="@drawable/wm_avatar"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tvMeName"
+            app:poly_vertices="0"/>
+
+        <LinearLayout
+            android:id="@+id/llMeDetail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_15dp"
+            android:layout_marginTop="@dimen/dimen_20dp"
+            android:gravity="center_vertical"
+            app:layout_constraintStart_toStartOf="@+id/tvMeName"
+            app:layout_constraintTop_toBottomOf="@+id/ivMeAvatar">
+
+            <ImageView
+                android:id="@+id/ivSex"
+                android:layout_width="@dimen/dimen_15dp"
+                android:layout_height="@dimen/dimen_15dp"
+                android:layout_marginEnd="@dimen/dimen_8dp"
+                android:src="@drawable/girl"/>
+
+            <TextView
+                android:id="@+id/ivBirth"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="90后"
+                android:textSize="@dimen/dimen_12sp"/>
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="@dimen/dimen_10dp"
+                android:layout_marginStart="@dimen/dimen_8dp"
+                android:layout_marginEnd="@dimen/dimen_8dp"
+                android:background="@color/colorD7D7D7"/>
+
+            <TextView
+                android:id="@+id/ivSkin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="肤质"
+                android:textSize="@dimen/dimen_12sp"/>
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="@dimen/dimen_10dp"
+                android:layout_marginStart="@dimen/dimen_8dp"
+                android:layout_marginEnd="@dimen/dimen_8dp"
+                android:background="@color/colorD7D7D7"/>
+
+            <TextView
+                android:id="@+id/ivLocal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="青岛"
+                android:textSize="@dimen/dimen_12sp"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvEdit"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_15dp"
+            android:layout_marginTop="@dimen/dimen_10dp"
+            android:background="@drawable/shape_follow_ccc_90"
+            android:padding="@dimen/dimen_8dp"
+            android:text="编辑资料"
+            android:textSize="@dimen/dimen_10sp"
+            app:layout_constraintBottom_toBottomOf="@+id/ivMeAvatar"
+            app:layout_constraintEnd_toStartOf="@+id/ivAddOne"
+            app:layout_constraintStart_toEndOf="@+id/ivMeAvatar"/>
+
+        <ImageView
+            android:id="@+id/ivAddOne"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginStart="@dimen/dimen_25dp"
+            android:layout_marginEnd="@dimen/dimen_15dp"
+            android:background="@drawable/shape_follow_ccc_90"
+            android:paddingStart="@dimen/dimen_15dp"
+            android:paddingEnd="@dimen/dimen_15dp"
+            android:src="@drawable/add_one"
+            android:textSize="@dimen/dimen_10sp"
+            app:layout_constraintBottom_toBottomOf="@+id/tvEdit"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/tvEdit"
+            app:layout_constraintTop_toTopOf="@+id/tvEdit"/>
+
+        <EditText
+            android:id="@+id/edDetail"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dimen_35dp"
+            android:layout_marginStart="@dimen/dimen_15dp"
+            android:layout_marginEnd="@dimen/dimen_15dp"
+            android:background="@color/white"
+            android:ellipsize="end"
+            android:hint="添加个人描述，可让大家更好的认识你"
+            android:imeOptions="actionDone"
+            android:lines="1"
+            android:paddingTop="@dimen/dimen_15dp"
+            android:textColor="@color/color999"
+            android:textColorHint="@color/color999"
+
+            android:textSize="@dimen/dimen_12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/tvMeName"
+            app:layout_constraintTop_toBottomOf="@+id/llMeDetail"/>
+
+        <LinearLayout
+            android:id="@+id/llZanFans"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginEnd="@dimen/dimen_15dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toTopOf="@+id/tvEdit"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/tvEdit"
+            app:layout_constraintTop_toTopOf="@+id/ivMeAvatar">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvFollow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_5dp"
+                    android:text="关注"
+                    android:textColor="@color/color666"
+                    android:textSize="@dimen/dimen_11sp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvFans"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_5dp"
+                    android:text="粉丝"
+                    android:textColor="@color/color666"
+                    android:textSize="@dimen/dimen_11sp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvZanSave"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_5dp"
+                    android:text="获赞及收藏"
+                    android:textColor="@color/color666"
+                    android:textSize="@dimen/dimen_11sp"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </android.support.constraint.ConstraintLayout>
+
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/llZanFans">
+
+
+        <com.flyco.tablayout.CommonTabLayout
+            android:id="@+id/tabLayout"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dimen_40dp"
+            android:layout_marginStart="@dimen/dimen_10dp"
+            android:layout_marginTop="@dimen/dimen_20dp"
+            android:layout_marginEnd="@dimen/dimen_10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tl_divider_padding="@dimen/dimen_10dp"
+            app:tl_divider_width="1px"
+            app:tl_indicator_color="@color/colorFollowRed"
+            app:tl_indicator_width="@dimen/dimen_26dp"
+            app:tl_tab_space_equal="true"
+            app:tl_textBold="BOTH"
+            app:tl_textSelectColor="@color/black"
+            app:tl_textUnselectColor="@color/color999"/>
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="@dimen/dimen_15dp"
+            android:background="@color/colorF3F5F7"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tabLayout"/>
+
+        <com.flyco.tablayout.CommonTabLayout
+            android:id="@+id/tabLayoutChild"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dimen_40dp"
+            android:layout_marginTop="@dimen/dimen_10dp"
+            android:paddingStart="@dimen/dimen_10dp"
+            android:paddingEnd="@dimen/dimen_10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view"
+            app:tl_indicator_color="@color/colorFollowFenRed"
+            app:tl_indicator_style="BLOCK"
+            app:tl_divider_padding="@dimen/dimen_10dp"
+            app:tl_indicator_width="@dimen/dimen_70dp"
+            app:tl_textSelectColor="@color/colorFollowRed"
+            app:tl_textUnselectColor="@color/black"/>
+    </android.support.constraint.ConstraintLayout>
+
+</LinearLayout>

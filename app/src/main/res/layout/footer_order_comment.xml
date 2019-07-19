@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_marginBottom="@dimen/dimen_10dp"
+              android:background="@color/white"
+              android:orientation="vertical">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_10dp"
+        android:background="@drawable/shape_divider"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dimen_10dp"
+        android:layout_marginTop="@dimen/dimen_20dp"
+        android:layout_marginBottom="@dimen/dimen_10dp"
+        android:text="体验评论"
+        android:textSize="@dimen/dimen_16sp"
+        android:textStyle="bold"/>
+
+    <android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_90dp"
+        android:background="@color/white">
+
+        <top.jplayer.baseprolibrary.widgets.polygon.PolygonImageView
+            android:id="@+id/ivCommentAvatar"
+            android:layout_width="@dimen/dimen_35dp"
+            android:layout_height="@dimen/dimen_35dp"
+            android:layout_marginStart="@dimen/dimen_10dp"
+            android:layout_marginTop="@dimen/dimen_15dp"
+            android:src="@drawable/wm_avatar"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:poly_vertices="0"/>
+
+        <TextView
+            android:id="@+id/tvName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_10dp"
+            android:gravity="center_vertical"
+            android:text="@string/app_name"
+            android:textColor="@color/black"
+            android:textSize="@dimen/dimen_14sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/llZan"
+            app:layout_constraintStart_toEndOf="@+id/ivCommentAvatar"
+            app:layout_constraintTop_toTopOf="@+id/ivCommentAvatar"/>
+
+        <TextView
+            android:id="@+id/tvTime"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_10dp"
+            android:layout_marginTop="@dimen/dimen_5dp"
+            android:text="@string/app_name"
+            android:textColor="@color/color999"
+            android:textSize="@dimen/dimen_12sp"
+            app:layout_constraintStart_toEndOf="@+id/ivCommentAvatar"
+            app:layout_constraintTop_toBottomOf="@+id/tvName"/>
+
+        <TextView
+            android:id="@+id/tvContent"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_10dp"
+            android:layout_marginTop="@dimen/dimen_10dp"
+            android:layout_marginEnd="@dimen/dimen_10dp"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:lines="1"
+            android:text="神评"
+            android:textSize="@dimen/dimen_14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/ivCommentAvatar"
+            app:layout_constraintTop_toBottomOf="@+id/tvTime"/>
+
+        <LinearLayout
+            android:id="@+id/llZan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@+id/ivCommentAvatar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/ivCommentAvatar">
+
+            <TextView
+                android:id="@+id/tvNum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/dimen_5dp"
+                android:text="1"/>
+
+            <ImageView
+                android:id="@+id/ivZan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/dimen_10dp"
+                android:src="@drawable/selector_zan"/>
+        </LinearLayout>
+    </android.support.constraint.ConstraintLayout>
+
+    <android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/clMore"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_95dp"
+        android:layout_marginStart="@dimen/dimen_50dp"
+        android:background="@color/white"
+        android:visibility="gone">
+
+        <top.jplayer.baseprolibrary.widgets.polygon.PolygonImageView
+            android:id="@+id/ivAvatarMore"
+            android:layout_width="@dimen/dimen_30dp"
+            android:layout_height="@dimen/dimen_30dp"
+            android:layout_marginTop="@dimen/dimen_15dp"
+            android:src="@drawable/wm_avatar"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:poly_vertices="0"/>
+
+        <TextView
+            android:id="@+id/tvNameMore"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_10dp"
+            android:text="@string/app_name"
+            android:textColor="@color/black"
+            android:textSize="@dimen/dimen_16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/ivAvatarMore"
+            app:layout_constraintTop_toTopOf="@+id/ivAvatarMore"/>
+
+        <TextView
+            android:id="@+id/tvTimeMore"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_10dp"
+            android:layout_marginTop="@dimen/dimen_2dp"
+            android:text="@string/app_name"
+            android:textColor="@color/color999"
+            android:textSize="@dimen/dimen_10sp"
+            app:layout_constraintStart_toEndOf="@+id/ivAvatarMore"
+            app:layout_constraintTop_toBottomOf="@+id/tvNameMore"/>
+
+        <TextView
+            android:id="@+id/tvContentMore"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_2dp"
+            android:layout_marginEnd="@dimen/dimen_10dp"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:lines="1"
+            android:text="神评"
+            android:textSize="@dimen/dimen_12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/ivAvatarMore"
+            app:layout_constraintTop_toBottomOf="@+id/tvTimeMore"/>
+
+        <TextView
+            android:id="@+id/tvMore"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_2dp"
+            android:text="展开42条回复"
+            android:textColor="@color/color999"
+            android:textSize="@dimen/dimen_9sp"
+            app:layout_constraintStart_toStartOf="@+id/ivAvatarMore"
+            app:layout_constraintTop_toBottomOf="@+id/tvContentMore"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            app:layout_constraintBottom_toBottomOf="@+id/ivAvatarMore"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/ivAvatarMore">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/dimen_5dp"
+                android:text="1"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/dimen_10dp"
+                android:src="@drawable/selector_zan"/>
+        </LinearLayout>
+    </android.support.constraint.ConstraintLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginStart="@dimen/dimen_10dp"
+        android:layout_marginEnd="@dimen/dimen_10dp"
+        android:background="@color/colorF3F5F7"/>
+
+    <TextView
+        android:id="@+id/tvOrderCommentMore"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_40dp"
+        android:text="查看全部1条评论"
+        android:textColor="@color/color999"
+        android:textSize="@dimen/dimen_12sp"/>
+</LinearLayout>

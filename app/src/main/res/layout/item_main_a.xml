@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_item_a"
+    android:layout_width="305px"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="10px"
+    android:layout_marginRight="10px"
+    android:layout_marginTop="15px">
+
+    <ImageView
+        android:id="@+id/im_pic_a"
+        android:layout_width="match_parent"
+        android:layout_height="400px" />
+
+    <TextView
+        android:id="@+id/tv_title_a"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/im_pic_a"
+        android:layout_alignRight="@+id/im_pic_a"
+        android:layout_toLeftOf="@+id/im_pic_a"
+        android:layout_marginTop="10px"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:textSize="34px" />
+
+    <ImageView
+        android:id="@+id/im_photo_a"
+        android:layout_width="60px"
+        android:layout_height="60px"
+        android:layout_below="@+id/tv_title_a"
+        android:layout_marginTop="10px" />
+
+    <TextView
+        android:id="@+id/tv_name_a"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/im_photo_a"
+        android:layout_marginBottom="10px"
+        android:layout_toRightOf="@+id/im_photo_a"
+        android:textSize="26px" />
+
+    <TextView
+        android:id="@+id/tv_number_a"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/im_pic_a"
+        android:layout_alignBottom="@+id/im_photo_a"
+        android:layout_marginRight="10px"
+        android:layout_marginBottom="10px"
+        android:text="1314"
+        android:textSize="22px" />
+
+    <ImageView
+        android:id="@+id/im_zan_a"
+        android:layout_width="30px"
+        android:layout_height="30px"
+        android:layout_alignBottom="@+id/im_photo_a"
+        android:layout_marginRight="10px"
+        android:layout_marginBottom="10px"
+        android:layout_toLeftOf="@+id/tv_number_a"
+        android:src="@mipmap/test_back" />
+
+
+</RelativeLayout>

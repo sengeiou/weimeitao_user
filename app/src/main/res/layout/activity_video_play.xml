@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <com.shuyu.gsyvideoplayer.video.StandardGSYVideoPlayer
+        android:id="@+id/player"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <top.jplayer.baseprolibrary.widgets.polygon.PolygonImageView
+        android:id="@+id/ivVideoAvatar"
+        android:layout_width="40dp"
+        android:layout_height="@dimen/dimen_40dp"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="@dimen/dimen_20dp"
+        android:src="@drawable/wm_avatar"
+        app:layout_constraintBottom_toTopOf="@+id/tvVideoTitle"
+        app:layout_constraintStart_toStartOf="@+id/tvVideoTitle"
+        app:poly_border="true"
+        app:poly_border_color="@color/white"
+        app:poly_border_width="@dimen/dimen_1dp"
+        app:poly_vertices="0"/>
+
+    <TextView
+        android:id="@+id/tvVideoName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dimen_10dp"
+        android:text="@string/app_name"
+        android:textColor="@color/white"
+        android:textSize="@dimen/dimen_16sp"
+        app:layout_constraintStart_toEndOf="@+id/ivVideoAvatar"
+        app:layout_constraintTop_toTopOf="@+id/ivVideoAvatar"/>
+
+    <LinearLayout
+        android:id="@+id/llMeDetail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dimen_10dp"
+        android:gravity="center_vertical"
+        app:layout_constraintBottom_toBottomOf="@+id/ivVideoAvatar"
+        app:layout_constraintStart_toEndOf="@+id/ivVideoAvatar">
+
+        <TextView
+            android:id="@+id/ivBirth"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="90后"
+            android:textColor="@color/white"
+            android:textSize="@dimen/dimen_12sp"/>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="@dimen/dimen_10dp"
+            android:layout_marginStart="@dimen/dimen_8dp"
+            android:layout_marginEnd="@dimen/dimen_8dp"
+            android:background="@color/colorD7D7D7"/>
+
+        <TextView
+            android:id="@+id/ivSkin"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="肤质"
+            android:textColor="@color/white"
+            android:textSize="@dimen/dimen_12sp"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvVideoTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dimen_20dp"
+        android:layout_marginEnd="@dimen/dimen_20dp"
+        android:layout_marginBottom="@dimen/dimen_40dp"
+        android:gravity="center_vertical"
+        android:maxLines="3"
+        android:text="@string/app_name"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+</android.support.constraint.ConstraintLayout>

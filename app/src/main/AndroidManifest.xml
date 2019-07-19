@@ -1,0 +1,397 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          xmlns:tools="http://schemas.android.com/tools"
+          package="com.wmtc.wmt">
+    <!-- 权限设置 -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/> <!-- 高德权限 -->
+    <!-- 用于进行网络定位 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/> <!-- 用于访问GPS定位 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/> <!-- 获取运营商信息，用于支持提供运营商信息相关的接口 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/> <!-- 用于访问wifi网络信息，wifi信息会用于进行网络定位 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/> <!-- 这个权限用于获取wifi的获取权限，wifi信息会用来进行网络定位 -->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/> <!-- 用于访问网络，网络定位需要上网 -->
+    <uses-permission android:name="android.permission.INTERNET"/> <!-- 用于读取手机当前的状态 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/> <!-- 写入扩展存储，向扩展卡写入数据，用于写入缓存定位数据 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/> <!-- 用于申请调用A-GPS模块 -->
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS"/> <!-- 用于申请获取蓝牙信息进行室内定位 -->
+    <uses-permission android:name="android.permission.BLUETOOTH"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
+
+    <application
+        android:name=".base.WmtApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/logo"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/logo"
+        android:supportsRtl="true"
+        android:theme="@style/OblAppTheme"
+        android:usesCleartextTraffic="true"
+        tools:ignore="GoogleAppIndexingWarning"
+        tools:replace="label,allowBackup,icon,theme">
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false"/>
+
+        <!-- 布局适配 -->
+        <meta-data
+            android:name="design_width_in_dp"
+            android:value="360"/>
+        <meta-data
+            android:name="design_height_in_dp"
+            android:value="640"/> <!-- 高德地图 -->
+        <meta-data
+            android:name="com.amap.api.v2.apikey"
+            android:value="e97c46df2f0bc5c14fc4017294b3a078"/>
+        <meta-data
+            android:name="android.support.FILE_PROVIDER_PATHS"
+            android:resource="@xml/provider_paths"/>
+
+        <service android:name="com.amap.api.location.APSService"/> <!-- QQ登录 -->
+
+
+        <activity
+            android:name=".message.activity.CustomChatActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="fullUser"/>
+        <activity
+            android:name="com.tencent.tauth.AuthActivity"
+            android:launchMode="singleTask"
+            android:noHistory="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+
+                <data android:scheme="tencent101550603"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.tencent.connect.common.AssistActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="behind"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"/> <!-- 微信 -->
+
+        <activity
+            android:name=".personal.activity.LaunchActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="fullUser"
+            android:theme="@style/OblAppTheme.Splash">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+            <meta-data
+                android:name="android.app.shortcuts"
+                android:resource="@xml/shortcuts"/>
+        </activity> <!-- 主页 -->
+        <activity
+            android:name=".MainActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="fullUser"
+            android:theme="@style/OblAppTheme.Main"/> <!-- 手机号登录 -->
+        <activity
+            android:name=".forum.activity.NearByLocalActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="fullUser"/>
+        <activity
+            android:name=".personal.activity.InterestActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="fullUser"/>
+        <activity
+            android:name=".appoint.activity.SaveAfterSaleActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="fullUser"/>
+        <activity
+            android:name=".forum.activity.VideoPlayActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="fullUser"/>
+        <activity
+            android:name=".personal.activity.CreateInterestActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="fullUser"/>
+        <activity
+            android:name=".personal.activity.AboutActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="fullUser"/>
+        <activity
+            android:name="com.amap.api.navi.AmapRouteActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:launchMode="singleTop"
+            android:screenOrientation="fullUser"
+            android:theme="@style/OblAppTheme.Main"/>
+        <activity
+            android:name=".personal.activity.PhoneLoginActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="fullUser"
+            android:theme="@style/OblAppTheme.BottomTop"/> <!-- 密码登录 -->
+        <activity
+            android:name=".personal.activity.PwdLoginActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="fullUser"/> <!-- 忘记密码 - 获取验证码 -->
+        <activity
+            android:name=".personal.activity.ForgetPwdActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="fullUser"/> <!-- 更新页面 -->
+        <!-- 空白网页 传入title及url即可 -->
+        <!-- 设置密码重置密码界面 -->
+        <activity
+            android:name=".personal.activity.SetPasswordActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="fullUser"/> <!-- 完善用户信息界面 头像 -->
+        <activity
+            android:name=".personal.activity.SetPreMessageActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="fullUser"/> <!-- 项目百科 -->
+        <!--微信-->
+
+        <activity
+            android:name=".wxapi.WXEntryActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:screenOrientation="fullUser"/> <!-- 启动页 -->
+
+        <activity
+            android:name=".wxapi.WXPayEntryActivity"
+            android:exported="true"
+            android:launchMode="singleTop"
+            android:screenOrientation="fullUser"/>
+
+        <receiver
+            android:name=".wxapi.AppRegister"
+            android:permission="com.tencent.mm.plugin.permission.SEND">
+            <intent-filter>
+                <action android:name="com.tencent.mm.plugin.openapi.Intent.ACTION_REFRESH_WXAPP"/>
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name=".message.receiver.JPushReceiver"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.REGISTRATION"/>
+                <action android:name="cn.jpush.android.intent.MESSAGE_RECEIVED"/>
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED"/>
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_OPENED"/>
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_CLICK_ACTION"/>
+                <action android:name="cn.jpush.android.intent.CONNECTION"/>
+                <action android:name="cn.jpush.android.intent.REGISTER"/>
+                <action android:name="cn.jpush.android.intent.REPORT"/>
+                <action android:name="cn.jpush.android.intent.PushService"/>
+                <action android:name="cn.jpush.android.MESSAGE"/>
+
+                <category android:name="com.wmtc.wmt"/>
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name=".appoint.activity.PicShowActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="fullUser"/>
+        <activity
+            android:name=".appoint.activity.SkinBkInfoActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="fullUser"/>
+
+        <activity
+            android:name=".appoint.activity.ProSkinBKActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="fullUser"/>
+        <activity
+            android:name=".appoint.activity.CityOpenActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="fullUser"/>
+        <activity
+            android:name=".appoint.activity.ActivityCustomCapture"
+            android:launchMode="singleTop"
+            android:screenOrientation="fullUser"/>
+        <activity
+            android:name=".appoint.activity.MatchShopProActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="fullUser"/>
+        <activity
+            android:name=".appoint.activity.ShopInfoActivity"
+            android:exported="true"
+            android:launchMode="singleTop"
+            android:screenOrientation="fullUser">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+
+                <data
+                    android:host="shopinfo"
+                    android:pathPrefix="/h5PathPrefix"
+                    android:scheme="scheme"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".appoint.activity.MoreOrderCommentActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="fullUser"
+            android:theme="@style/OblAppTheme.BottomTop"/>
+        <activity
+            android:name=".appoint.activity.MatchAnimActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="fullUser"/>
+        <activity
+            android:name=".personal.activity.LocalCreateActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="fullUser"/>
+        <activity
+            android:name=".personal.activity.LocalListActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="fullUser"/>
+        <activity
+            android:name=".appoint.activity.ProjectInfoActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="fullUser"/>
+
+        <activity
+            android:name=".appoint.activity.PreAppointOrderActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="fullUser"/> <!-- 技师选择 -->
+        <activity
+            android:name=".appoint.activity.SelectTeachActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="fullUser"/> <!-- 检查并支付 -->
+        <activity
+            android:name=".appoint.activity.PayOkActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="fullUser"
+            android:theme="@style/OblAppTheme.BottomTop"/>
+        <activity
+            android:name=".appoint.activity.CheckPayActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="fullUser"/> <!-- 订单状态 -->
+
+        <activity
+            android:name=".appoint.activity.OffLineActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="fullUser"/>
+        <activity
+            android:name=".appoint.activity.OrderInfoActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="fullUser"/>
+
+
+        <activity
+            android:name=".appoint.activity.OrderCommentActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="fullUser"/>
+        <!-- 设置页面-->
+        <activity
+            android:name=".personal.activity.SetActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="fullUser"/>
+        <activity
+            android:name=".personal.activity.FeedBackActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="fullUser"/>
+        <!-- 编辑个人信息-->
+        <activity
+            android:name=".personal.activity.SetPersonalMessageActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="fullUser"/>
+        <!-- 设置手机号-->
+        <activity
+            android:name=".personal.activity.SetPhoneActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="fullUser"/>
+        <!-- 全部订单-->
+        <activity
+            android:name=".appoint.activity.AllOrderListActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="fullUser"/>
+        <!--测试加载动画-->
+        <!-- 红包详情-->
+        <activity
+            android:name=".appoint.activity.RedBagDetailsActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="fullUser"/>
+        <!-- 红包主页-->
+        <activity
+            android:name=".appoint.activity.RedBagWillActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="fullUser"/>
+        <activity
+            android:name=".appoint.activity.RedBagHistoryActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="fullUser"/>
+
+        <activity
+            android:name=".forum.activity.ForumDetailActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="fullUser"/>
+        <activity
+            android:name=".forum.activity.ForumSearchActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="fullUser"/>
+        <activity
+            android:name=".forum.activity.ForumMeActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="fullUser"/>
+        <activity
+            android:name=".forum.activity.ReportActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="fullUser"/>
+        <activity
+            android:name=".forum.activity.ForumSendActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="fullUser"
+            android:theme="@style/OblAppTheme.BottomTop"/>
+        <activity
+            android:name=".forum.activity.ForumVideoSendActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="fullUser"
+            android:theme="@style/OblAppTheme.BottomTop"/>
+        <activity
+            android:name=".forum.activity.FansActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="fullUser"/>
+        <activity
+            android:name=".forum.activity.FollowActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="fullUser"/>
+        <activity
+            android:name=".forum.activity.MoreCommentActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="fullUser"
+            android:theme="@style/OblAppTheme.BottomTop"/>
+        <activity
+            android:name=".forum.activity.ForumXindeSendActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="fullUser"/>
+        <activity
+            android:name=".forum.activity.ForumXindeEditActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="fullUser"/>
+        <activity
+            android:name=".forum.activity.ForumHejiSendActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="fullUser"/>
+        <activity
+            android:name=".forum.activity.ForumHejiEditActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="fullUser"/>
+        <activity
+            android:name=".forum.activity.TopicActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="fullUser"/>
+
+        <!-- 设置手机号设置密码-->
+        <activity
+            android:name=".personal.activity.SetPwdByAuthActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="fullUser"/>
+        <activity
+            android:name="com.jaiky.imagespickers.ImageSelectorActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="fullUser"
+            android:theme="@style/OblAppTheme"
+            tools:replace="android:theme"/>
+    </application>
+
+</manifest>

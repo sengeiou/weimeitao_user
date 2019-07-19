@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/llToolBar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_50dp">
+
+        <ImageView
+            android:id="@+id/ivDel"
+            android:layout_width="@dimen/dimen_50dp"
+            android:layout_height="match_parent"
+            android:padding="@dimen/dimen_17dp"
+            android:src="@mipmap/close"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="支付完成"
+            android:textSize="@dimen/dimen_16sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:layout_width="@dimen/dimen_50dp"
+            android:layout_height="match_parent"/>
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/dimen_45dp"
+        android:src="@drawable/order_ok"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_20dp"
+        android:text="订单支付成功"
+        android:textSize="@dimen/dimen_18sp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/tvPrice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_10dp"
+        android:text="￥0.01"
+        android:textSize="@dimen/dimen_16sp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_20dp"
+        android:text="感谢您对唯美淘的信任，期待再次光临"
+        android:textColor="@color/color999"
+        android:textSize="@dimen/dimen_12sp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_50dp"
+        android:layout_marginTop="@dimen/dimen_20dp"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/tvOrder"
+            android:layout_width="@dimen/dimen_100dp"
+            android:layout_height="@dimen/dimen_40dp"
+            android:layout_marginEnd="@dimen/dimen_20dp"
+            android:background="@drawable/shape_send_red"
+            android:text="查看订单"
+            android:textColor="@color/white"/>
+
+        <TextView
+            android:id="@+id/tvBack"
+            android:layout_width="@dimen/dimen_100dp"
+            android:layout_height="@dimen/dimen_40dp"
+            android:layout_marginStart="@dimen/dimen_20dp"
+            android:background="@drawable/shape_follow_red"
+            android:text="返回上级"
+            android:textColor="@color/black"/>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_1dp"
+        android:layout_marginTop="@dimen/dimen_20dp"
+        android:background="@color/line"/>
+
+    <TextView
+        android:id="@+id/tvRiji"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_50dp"
+        android:drawableEnd="@drawable/right_arrow"
+        android:gravity="center_vertical"
+        android:paddingStart="@dimen/dimen_10dp"
+        android:paddingEnd="@dimen/dimen_10dp"
+        android:text="写日记"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_1dp"
+        android:background="@color/line"/>
+
+    <TextView
+        android:id="@+id/tvServer"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_50dp"
+        android:drawableEnd="@drawable/right_arrow"
+        android:gravity="center_vertical"
+        android:paddingStart="@dimen/dimen_10dp"
+        android:paddingEnd="@dimen/dimen_10dp"
+        android:text="联系客服"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_1dp"
+        android:background="@color/line"/>
+</LinearLayout>

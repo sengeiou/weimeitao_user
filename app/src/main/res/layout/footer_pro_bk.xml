@@ -1,0 +1,397 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:descendantFocusability="blocksDescendants"
+    android:orientation="vertical">
+
+    <com.zhy.view.flowlayout.TagFlowLayout
+        android:id="@+id/flowLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:auto_select_effect="true"
+        app:max_select="1"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerViewCheck"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dimen_10dp"
+        android:layout_marginTop="@dimen/dimen_10dp"
+        android:layout_marginEnd="@dimen/dimen_10dp"
+        android:layout_marginBottom="@dimen/dimen_20dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dimen_10dp"
+        android:layout_marginBottom="@dimen/dimen_20dp"
+        android:text="基本信息"
+        android:textSize="@dimen/dimen_16sp"
+        android:textStyle="bold"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingStart="@dimen/dimen_10dp"
+        android:paddingEnd="@dimen/dimen_10dp"
+        android:paddingBottom="@dimen/dimen_20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="@dimen/dimen_60dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/dimen_15dp"
+                android:gravity="center_vertical"
+                android:text="项目简介"
+                android:textColor="@color/color999"/>
+
+            <TextView
+                android:id="@+id/tvProInfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:lineSpacingExtra="@dimen/dimen_10dp"
+                android:text="源自韩国皮肤管理界的皮肤深层清洁焕肤项目，以纳米及的黄金微粒和多种营养成分，车顶清洁引起皮肤暗沉、老化的重金属和其他有害物质，减少因紫外线引起的损伤。"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_30dp">
+
+            <TextView
+                android:layout_width="@dimen/dimen_60dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/dimen_15dp"
+                android:gravity="center_vertical"
+                android:text="项目功效"
+                android:textColor="@color/color999"/>
+
+            <TextView
+                android:id="@+id/tvXMGX"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:lineSpacingExtra="@dimen/dimen_10dp"
+                android:lines="1"
+                android:text="美白换肤、重金属去皱"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_30dp">
+
+            <TextView
+                android:layout_width="@dimen/dimen_60dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/dimen_15dp"
+                android:gravity="center_vertical"
+                android:text="不宜人群"
+                android:textColor="@color/color999"/>
+
+            <TextView
+                android:id="@+id/tvBYRQ"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:lineSpacingExtra="@dimen/dimen_10dp"
+                android:lines="1"
+                android:text="不适合对黄金有过敏性反应的皮肤"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_30dp">
+
+            <TextView
+                android:layout_width="@dimen/dimen_60dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/dimen_15dp"
+                android:gravity="center_vertical"
+                android:text="操作部位"
+                android:textColor="@color/color999"/>
+
+            <TextView
+                android:id="@+id/tvCZBW"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:lineSpacingExtra="@dimen/dimen_10dp"
+                android:lines="1"
+                android:text="脸部"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_30dp">
+
+            <TextView
+                android:layout_width="@dimen/dimen_60dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/dimen_15dp"
+                android:gravity="center_vertical"
+                android:text="治疗方式"
+                android:textColor="@color/color999"/>
+
+            <TextView
+                android:id="@+id/tvZLFS"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:lineSpacingExtra="@dimen/dimen_10dp"
+                android:text="24K纳米黄金微粒通过离子交换方式，结合专业的皮肤管理手法和深入导入一起，清洁面部"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_30dp">
+
+            <TextView
+                android:layout_width="@dimen/dimen_60dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/dimen_15dp"
+                android:gravity="center_vertical"
+                android:text="价格区间"
+                android:textColor="@color/color999"/>
+
+            <TextView
+                android:id="@+id/tvJGQJ"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:lineSpacingExtra="@dimen/dimen_10dp"
+                android:text="0-1000元"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_30dp">
+
+            <TextView
+                android:layout_width="@dimen/dimen_60dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/dimen_15dp"
+                android:gravity="center_vertical"
+                android:text="治疗时长"
+                android:textColor="@color/color999"/>
+
+            <TextView
+                android:id="@+id/tvZLSC"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:lineSpacingExtra="@dimen/dimen_10dp"
+                android:text="60-90分钟"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:layout_marginTop="@dimen/dimen_15dp"
+        android:background="@drawable/shape_divider"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dimen_10dp"
+        android:layout_marginTop="@dimen/dimen_20dp"
+        android:layout_marginBottom="@dimen/dimen_20dp"
+        android:text="项目说明"
+        android:textSize="@dimen/dimen_16sp"
+        android:textStyle="bold"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingStart="@dimen/dimen_10dp"
+        android:paddingEnd="@dimen/dimen_10dp"
+        android:paddingBottom="@dimen/dimen_20dp">
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="@dimen/dimen_60dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/dimen_15dp"
+                android:drawableStart="@drawable/youdian_image"
+                android:drawablePadding="@dimen/dimen_5dp"
+                android:gravity="center_vertical"
+                android:text="优点"
+                android:textColor="@color/colorFollowRed"/>
+
+            <TextView
+                android:id="@+id/tvProGood"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:lineSpacingExtra="@dimen/dimen_10dp"
+                android:text="源自韩国皮肤管理界的皮肤深层清洁焕肤项目，以纳米及的黄金微粒和多种营养成分，车顶清洁引起皮肤暗沉、老化的重金属和其他有害物质，减少因紫外线引起的损伤。"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp">
+
+            <TextView
+                android:layout_width="@dimen/dimen_60dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/dimen_15dp"
+                android:drawableStart="@drawable/zhuyi_image"
+                android:drawablePadding="@dimen/dimen_5dp"
+                android:gravity="center_vertical"
+                android:text="注意"
+                android:textColor="@color/colorFollowRed"/>
+
+            <TextView
+                android:id="@+id/tvProBad"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:lineSpacingExtra="@dimen/dimen_10dp"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:layout_marginTop="@dimen/dimen_15dp"
+        android:background="@drawable/shape_divider"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dimen_10dp"
+        android:layout_marginTop="@dimen/dimen_20dp"
+        android:layout_marginBottom="@dimen/dimen_20dp"
+        android:text="治疗说明"
+        android:textSize="@dimen/dimen_16sp"
+        android:textStyle="bold"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingStart="@dimen/dimen_10dp"
+        android:paddingEnd="@dimen/dimen_10dp"
+        android:paddingBottom="@dimen/dimen_20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="@dimen/dimen_60dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/dimen_15dp"
+                android:gravity="center_vertical"
+                android:text="治疗方法"
+                android:textColor="@color/color999"/>
+
+            <TextView
+                android:id="@+id/tvZLFF"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:lineSpacingExtra="@dimen/dimen_10dp"
+                android:text="小气泡深层清洁是有去除黑头、去多余皮脂、控制痘痘、美白肌肤的实际作用的，而且小气泡深层清洁做完之后会立马感觉到自己的黑头变少了，效果可以说是速成的。"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_30dp">
+
+            <TextView
+                android:layout_width="@dimen/dimen_60dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/dimen_15dp"
+                android:gravity="center_vertical"
+                android:text="配合仪器"
+                android:textColor="@color/color999"/>
+
+            <TextView
+                android:id="@+id/tvPHYQ"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:lineSpacingExtra="@dimen/dimen_10dp"
+                android:text="小气泡深层清洁是有去除黑头、去多余皮脂、控制痘痘、美白肌肤的实际作用的，而且小气泡深层清洁做完之后会立马感觉到自己的黑头变少了，效果可以说是速成的。"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llPics"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:layout_marginTop="@dimen/dimen_15dp"
+            android:background="@drawable/shape_divider"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical">
+
+            <TextView
+
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dimen_10dp"
+                android:layout_marginTop="@dimen/dimen_20dp"
+                android:layout_marginBottom="@dimen/dimen_20dp"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="治疗效果"
+                android:textSize="@dimen/dimen_16sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/tvMorePic"
+
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="@dimen/dimen_10dp"
+                android:drawableEnd="@drawable/right_arrow"
+                android:gravity="center_vertical|end"
+                android:text="更多"/>
+        </LinearLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_110dp"
+            android:layout_marginStart="@dimen/dimen_5dp"
+            android:layout_marginEnd="@dimen/dimen_5dp"
+            android:layout_marginBottom="@dimen/dimen_20dp"/>
+    </LinearLayout>
+</LinearLayout>
+

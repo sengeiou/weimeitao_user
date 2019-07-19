@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/flInputComment"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="bottom"
+    android:background="@color/white">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@drawable/toolbar_shadow"
+        android:scaleType="centerCrop"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_50dp"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:gravity="center_vertical">
+
+        <top.jplayer.baseprolibrary.widgets.polygon.PolygonImageView
+            android:id="@+id/ivUserAvatar"
+            android:layout_width="@dimen/dimen_30dp"
+            android:layout_height="@dimen/dimen_30dp"
+            android:layout_marginStart="@dimen/dimen_10dp"
+            android:src="@drawable/wm_avatar"
+            app:poly_vertices="0"/>
+
+        <EditText
+            android:id="@+id/edInput"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dimen_30dp"
+            android:layout_marginStart="@dimen/dimen_10dp"
+            android:layout_weight="1"
+            android:background="@drawable/shape_f7f9fc"
+            android:drawableStart="@drawable/forum_edit"
+            android:drawablePadding="@dimen/dimen_10dp"
+            android:hint="说点什么......"
+            android:imeOptions="actionSend"
+            android:inputType="text"
+            android:paddingStart="@dimen/dimen_10dp"
+            android:paddingEnd="@dimen/dimen_10dp"
+            android:singleLine="true"
+            android:textColor="@color/color999"
+            android:textColorHint="@color/color999"
+            android:textSize="@dimen/dimen_11sp"/>
+
+        <LinearLayout
+            android:id="@+id/llInputZan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:paddingStart="@dimen/dimen_10dp"
+            android:paddingEnd="@dimen/dimen_10dp">
+
+            <ImageView
+                android:id="@+id/ivInputZan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/selector_zan"/>
+
+            <TextView
+                android:id="@+id/tvInputZan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dimen_3dp"
+                android:text="1"/>
+        </LinearLayout>
+
+        <View
+            android:layout_width="@dimen/dimen_1dp"
+            android:layout_height="@dimen/dimen_10dp"
+            android:background="@color/colorD7D7D7"/>
+
+        <LinearLayout
+            android:id="@+id/llInputSave"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:paddingStart="@dimen/dimen_10dp"
+            android:paddingEnd="@dimen/dimen_10dp">
+
+            <ImageView
+                android:id="@+id/ivInputSave"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/selector_save"/>
+
+            <TextView
+                android:id="@+id/tvInputSave"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dimen_3dp"
+                android:text="1"/>
+        </LinearLayout>
+
+        <View
+            android:layout_width="@dimen/dimen_1dp"
+            android:layout_height="@dimen/dimen_10dp"
+            android:background="@color/colorD7D7D7"/>
+
+        <LinearLayout
+            android:id="@+id/llInputShare"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:paddingStart="@dimen/dimen_10dp"
+            android:paddingEnd="@dimen/dimen_10dp">
+
+            <ImageView
+                android:id="@+id/ivInputShare"
+                android:layout_width="@dimen/dimen_13dp"
+                android:layout_height="@dimen/dimen_16dp"
+                android:src="@drawable/test_share"
+                android:tint="@color/color666"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+</FrameLayout>

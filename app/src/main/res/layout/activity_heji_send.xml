@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:app="http://schemas.android.com/apk/res-auto"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_50dp"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/tvBack"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/dimen_15sp"
+                android:drawableStart="@drawable/wm_back_arrow"
+                android:drawablePadding="@dimen/dimen_15dp"
+                android:textSize="@dimen/dimen_18sp"
+                android:textStyle="bold"/>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"/>
+            <TextView
+                android:id="@+id/tvPreSave"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dimen_30dp"
+                android:layout_marginStart="@dimen/dimen_15sp"
+                android:background="@drawable/shape_follow_ccc_90"
+                android:drawablePadding="@dimen/dimen_5dp"
+                android:gravity="end|center_vertical"
+                android:paddingStart="@dimen/dimen_15dp"
+                android:paddingEnd="@dimen/dimen_15sp"
+                android:text="存草稿"
+                android:textColor="@color/color999"
+                android:textSize="@dimen/dimen_15sp"/>
+
+            <TextView
+                android:id="@+id/tvSave"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dimen_30dp"
+                android:layout_marginStart="@dimen/dimen_15sp"
+                android:layout_marginEnd="@dimen/dimen_10dp"
+                android:background="@drawable/shape_45_theme_red_all"
+                android:drawablePadding="@dimen/dimen_5dp"
+                android:gravity="end|center_vertical"
+                android:paddingStart="@dimen/dimen_15dp"
+                android:paddingEnd="@dimen/dimen_15sp"
+                android:text="发布"
+                android:textColor="@color/white"
+                android:textSize="@dimen/dimen_15sp"/>
+
+        </LinearLayout>
+
+
+        <com.scwang.smartrefresh.layout.SmartRefreshLayout
+            android:id="@+id/smartRefreshLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:srlEnablePreviewInEditMode="true"
+            app:srlPrimaryColor="@color/white">
+
+            <com.scwang.smartrefresh.layout.header.FalsifyHeader
+                android:id="@+id/classics"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <top.jplayer.baseprolibrary.widgets.MultipleStatusView
+                android:id="@+id/multipleStatusView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:emptyView="@layout/layout_empty_view"
+                app:errorView="@layout/layout_error_view"
+                app:loadingView="@layout/layout_loading_view"
+                app:noNetworkView="@layout/layout_network_view">
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+            </top.jplayer.baseprolibrary.widgets.MultipleStatusView>
+
+            <com.scwang.smartrefresh.layout.footer.FalsifyFooter
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:visibility="invisible"
+        android:id="@+id/llBottom"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_45dp"
+        android:layout_gravity="bottom"
+        android:background="@color/white"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_15dp"
+            android:drawableStart="@drawable/heji_aite"
+            android:drawablePadding="@dimen/dimen_5dp"
+            android:text="好友"
+            android:textColor="@color/color999"
+            android:textSize="@dimen/dimen_14sp"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/tvPic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_15dp"
+            android:drawableStart="@drawable/heji_pic"
+            android:drawablePadding="@dimen/dimen_5dp"
+            android:text="图片"
+            android:textColor="@color/color666"
+            android:textSize="@dimen/dimen_14sp"/>
+    </LinearLayout>
+</FrameLayout>
+
+

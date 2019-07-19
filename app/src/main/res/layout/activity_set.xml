@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/white"
+              android:orientation="vertical">
+
+    <!--列表-->
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/smart"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:srlEnablePureScrollMode="true">
+        <!--app:srlEnablePureScrollMode="true"-->
+
+        <com.scwang.smartrefresh.layout.header.ClassicsHeader
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:srlClassicsSpinnerStyle="FixedBehind"
+            app:srlDrawableArrowSize="@dimen/dimen_20dp"
+            app:srlDrawableMarginRight="@dimen/dimen_20dp"
+            app:srlDrawableProgressSize="@dimen/dimen_20dp"
+            app:srlEnableLastTime="true"
+            app:srlFinishDuration="100"
+            app:srlTextSizeTime="@dimen/dimen_11dp"
+            app:srlTextSizeTitle="@dimen/dimen_12dp"
+            app:srlTextTimeMarginTop="@dimen/dimen_2dp"/>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!--个人资料-->
+                <RelativeLayout
+                    android:id="@+id/rl_grzl"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen_60dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/dimen_15dp"
+                        android:text="个人资料"
+                        android:textSize="@dimen/dimen_16sp"/>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dimen_1dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginLeft="@dimen/dimen_10dp"
+                        android:layout_marginRight="@dimen/dimen_10dp"
+                        android:background="@color/line"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rlFeed"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen_60dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/dimen_15dp"
+                        android:text="意见反馈"
+                        android:textSize="@dimen/dimen_16sp"/>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dimen_1dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginLeft="@dimen/dimen_10dp"
+                        android:layout_marginRight="@dimen/dimen_10dp"
+                        android:background="@color/line"/>
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen_60dp">
+
+                    <TextView
+                        android:id="@+id/tvCurVersion"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/dimen_15dp"
+                        android:text="关于唯美淘"
+                        android:textSize="@dimen/dimen_16sp"/>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dimen_1dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginLeft="@dimen/dimen_10dp"
+                        android:layout_marginRight="@dimen/dimen_10dp"
+                        android:background="@color/line"/>
+                </RelativeLayout>
+                <!--退出-->
+                <RelativeLayout
+                    android:id="@+id/rl_tuichu"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen_60dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/dimen_15dp"
+                        android:text="退出登录"
+                        android:textSize="@dimen/dimen_16sp"/>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dimen_1dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginLeft="@dimen/dimen_10dp"
+                        android:layout_marginRight="@dimen/dimen_10dp"
+                        android:background="@color/line"/>
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+        <com.scwang.smartrefresh.layout.footer.FalsifyFooter
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+</LinearLayout>

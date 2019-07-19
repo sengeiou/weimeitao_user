@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dimen_180dp"
+    android:background="@color/white">
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="@dimen/dimen_1dp"
+        android:background="@color/line"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <LinearLayout
+        android:id="@+id/llTimeStatus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dimen_10dp"
+        android:layout_marginTop="@dimen/dimen_20dp"
+        android:layout_marginEnd="@dimen/dimen_10dp"
+        android:gravity="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/tvOrderTime"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:text="2019-01-01"
+            android:textSize="@dimen/dimen_12sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:divider="@drawable/shape_h_divider_black"
+            android:dividerPadding="@dimen/dimen_3dp"
+            android:gravity="center"
+            android:showDividers="middle">
+
+            <TextView
+                android:id="@+id/tvOrderStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/dimen_7dp"
+                android:text="待到店"
+                android:textSize="@dimen/dimen_12sp"/>
+
+            <ImageView
+                android:id="@+id/ivDelOrder"
+                android:layout_width="@dimen/dimen_15dp"
+                android:layout_height="@dimen/dimen_15dp"
+                android:layout_marginStart="@dimen/dimen_7dp"
+                android:src="@drawable/shop_local_del"/>
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <ImageView
+        android:id="@+id/ivOrderPic"
+        android:layout_width="@dimen/dimen_70dp"
+        android:layout_height="@dimen/dimen_70dp"
+        android:layout_marginStart="@dimen/dimen_10dp"
+        android:layout_marginTop="@dimen/dimen_10dp"
+        android:src="@drawable/wmt_default"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/llTimeStatus"/>
+
+    <TextView
+        android:id="@+id/tvOrderName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dimen_10dp"
+        android:ellipsize="end"
+        android:gravity="center_vertical"
+        android:lines="1"
+        android:text="@string/app_name"
+        app:layout_constraintEnd_toStartOf="@+id/tvOrderPrice"
+        app:layout_constraintStart_toEndOf="@+id/ivOrderPic"
+        app:layout_constraintTop_toTopOf="@+id/ivOrderPic"/>
+
+
+    <TextView
+        android:id="@+id/tvOrderPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dimen_10dp"
+        android:layout_marginEnd="@dimen/dimen_10dp"
+        android:text="￥0.00"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tvOrderName"
+        app:layout_constraintTop_toTopOf="@+id/ivOrderPic"/>
+
+    <TextView
+        android:id="@+id/tvOrderShop"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dimen_10dp"
+        android:layout_marginTop="@dimen/dimen_7dp"
+        android:ellipsize="end"
+        android:gravity="center_vertical"
+        android:lines="1"
+        android:text="@string/app_name"
+        android:textColor="@color/color999"
+        android:textSize="@dimen/dimen_12sp"
+        app:layout_constraintEnd_toStartOf="@+id/tvOrderPrice"
+        app:layout_constraintStart_toEndOf="@+id/ivOrderPic"
+        app:layout_constraintTop_toBottomOf="@+id/tvOrderName"/>
+
+    <TextView
+        android:id="@+id/tvOrderAppointTime"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dimen_10dp"
+        android:layout_marginTop="@dimen/dimen_7dp"
+        android:ellipsize="end"
+        android:gravity="center_vertical"
+        android:lines="1"
+        android:text="@string/app_name"
+        android:textColor="@color/color999"
+        android:textSize="@dimen/dimen_12sp"
+        app:layout_constraintEnd_toStartOf="@+id/tvOrderPrice"
+        app:layout_constraintStart_toEndOf="@+id/ivOrderPic"
+        app:layout_constraintTop_toBottomOf="@+id/tvOrderShop"/>
+
+    <TextView
+        android:id="@+id/tvOrderRefundPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/dimen_10dp"
+        android:text="退款金额：￥0.00"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivOrderPic"/>
+
+    <LinearLayout
+        android:id="@+id/llOrderStatusTip"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:gravity="center_vertical|end"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvOrderRefundPrice">
+
+        <TextView
+            android:id="@+id/tvWhyClose"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:layout_height="@dimen/dimen_28dp"
+            android:layout_marginEnd="@dimen/dimen_10dp"
+            android:paddingStart="@dimen/dimen_10dp"
+            android:paddingEnd="@dimen/dimen_10dp"
+            android:visibility="gone"
+            android:text="取消原因：超时未支付"
+            android:textColor="@color/color999"
+            android:textSize="@dimen/dimen_12sp"/>
+
+        <TextView
+            android:id="@+id/tvCreateNew"
+            android:layout_width="80dp"
+            android:layout_height="@dimen/dimen_28dp"
+            android:layout_marginEnd="@dimen/dimen_10dp"
+            android:background="@drawable/shape_dict_add"
+            android:text="再次预定"
+            android:textSize="@dimen/dimen_12sp"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/tvCommit"
+            android:layout_width="@dimen/dimen_80dp"
+            android:layout_height="@dimen/dimen_28dp"
+            android:layout_marginEnd="@dimen/dimen_10dp"
+            android:background="@drawable/shape_follow_red_90"
+            android:text="评价"
+            android:textColor="@color/colorFollowRed"
+            android:textSize="@dimen/dimen_12sp"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/tvCancel"
+            android:layout_width="@dimen/dimen_80dp"
+            android:layout_height="@dimen/dimen_28dp"
+            android:layout_marginEnd="@dimen/dimen_10dp"
+            android:background="@drawable/shape_follow_red_90"
+            android:text="取消订单"
+            android:textColor="@color/colorFollowRed"
+            android:textSize="@dimen/dimen_12sp"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/tvRiji"
+            android:layout_width="@dimen/dimen_80dp"
+            android:layout_height="@dimen/dimen_28dp"
+            android:layout_marginEnd="@dimen/dimen_10dp"
+            android:background="@drawable/shape_45_theme_red_all"
+            android:text="写日记"
+            android:textColor="@color/white"
+            android:textSize="@dimen/dimen_12sp"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/tvPayFirst"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dimen_28dp"
+            android:layout_marginEnd="@dimen/dimen_10dp"
+            android:background="@drawable/shape_45_theme_red_all"
+            android:paddingStart="@dimen/dimen_8dp"
+            android:paddingEnd="@dimen/dimen_8dp"
+            android:text="支付预约金：0.01"
+            android:textColor="@color/white"
+            android:textSize="@dimen/dimen_12sp"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/tvPayEnd"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dimen_28dp"
+            android:layout_marginEnd="@dimen/dimen_10dp"
+            android:background="@drawable/shape_45_theme_red_all"
+            android:paddingStart="@dimen/dimen_10dp"
+            android:paddingEnd="@dimen/dimen_10dp"
+            android:text="到店再付：0.01"
+            android:textColor="@color/white"
+            android:textSize="@dimen/dimen_12sp"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/tvWaitShop"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dimen_28dp"
+            android:layout_marginEnd="@dimen/dimen_10dp"
+            android:background="@drawable/shape_45_theme_red_all"
+            android:paddingStart="@dimen/dimen_10dp"
+            android:paddingEnd="@dimen/dimen_10dp"
+            android:text="等待商家接单"
+            android:textColor="@color/white"
+            android:textSize="@dimen/dimen_12sp"
+            android:visibility="gone"/>
+
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <View
+        android:id="@+id/appointBar"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_45dp"
+        android:gravity="bottom">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/tvHistory"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginStart="@dimen/dimen_15dp"
+                android:text="历史"
+                android:textColor="@color/color999"
+                android:textSize="@dimen/dimen_14sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/tvMatch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginStart="@dimen/dimen_15dp"
+                android:text="匹配"
+                android:textSize="@dimen/dimen_30sp"
+                android:textStyle="bold"/>
+
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"/>
+
+        <TextView
+            android:id="@+id/tvCurLocal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/dimen_10dp"
+            android:layout_marginBottom="@dimen/dimen_3dp"
+            android:drawableStart="@drawable/server_local"
+            android:drawablePadding="@dimen/dimen_3dp"
+            android:ellipsize="end"
+            android:lines="1"
+            android:maxEms="8"
+            android:text="正在定位.."
+            android:textColor="@color/black"
+            android:textStyle="bold"/>
+
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <FrameLayout
+            android:id="@+id/flMatch"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.scwang.smartrefresh.layout.SmartRefreshLayout
+                android:id="@+id/smartRefreshLayoutMatch"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:srlEnablePreviewInEditMode="true"
+                app:srlPrimaryColor="@color/white">
+
+                <com.scwang.smartrefresh.layout.header.ClassicsHeader
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fillViewport="true">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/dimen_25dp"
+                        android:orientation="vertical"
+                        android:paddingTop="@dimen/dp_20">
+
+                        <android.support.v7.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/dimen_10dp"
+                            android:layout_marginEnd="@dimen/dimen_10dp"
+                            app:cardCornerRadius="@dimen/dimen_10dp"
+                            app:cardElevation="0.1dp">
+
+                            <cn.bingoogolapple.bgabanner.BGABanner
+                                android:id="@+id/banner"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/dimen_130dp"
+                                app:banner_isNumberIndicator="false"
+                                app:banner_numberIndicatorBackground="@color/trans"
+                                app:banner_pointAutoPlayAble="true"
+                                app:banner_pointContainerBackground="@color/trans"
+                                app:banner_pointDrawable="@drawable/selector_point_banner_red_white"/>
+                        </android.support.v7.widget.CardView>
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="-105dp"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/wm_shadow"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/dimen_10dp"
+                            android:layout_marginBottom="@dimen/dimen_10dp"
+                            android:text="护肤需求"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/dimen_18sp"
+                            android:textStyle="bold"/>
+
+                        <android.support.v7.widget.RecyclerView
+                            android:id="@+id/recyclerViewSkin"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/dimen_10dp"
+                            android:layout_marginEnd="@dimen/dimen_10dp"
+                            android:layout_marginBottom="@dimen/dimen_10dp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/dimen_10dp"
+                            android:layout_marginBottom="@dimen/dimen_10dp"
+                            android:text="价格区间"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/dimen_18sp"
+                            android:textStyle="bold"/>
+
+                        <android.support.v7.widget.RecyclerView
+                            android:id="@+id/recyclerViewPrice"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/dimen_10dp"
+                            android:layout_marginEnd="@dimen/dimen_10dp"
+                            android:layout_marginBottom="@dimen/dimen_10dp"/>
+
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dimen_80dp"
+                            android:layout_marginStart="@dimen/dimen_30dp"
+                            android:layout_marginTop="@dimen/dimen_10dp"
+                            android:layout_marginEnd="@dimen/dimen_30dp"
+                            android:background="@drawable/btn_appoint">
+
+                            <TextView
+                                android:id="@+id/btnAppoint"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/dimen_50dp"
+                                android:layout_marginStart="@dimen/dimen_50dp"
+                                android:layout_marginTop="@dimen/dimen_10dp"
+                                android:layout_marginEnd="@dimen/dimen_50dp"
+                                android:paddingBottom="@dimen/dimen_8dp"
+                                android:text="立即约店"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/dimen_18sp"
+                                android:textStyle="bold"/>
+                        </FrameLayout>
+
+                        <android.support.v7.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/dimen_10dp"
+                            android:layout_marginEnd="@dimen/dimen_10dp"
+                            app:cardCornerRadius="@dimen/dimen_10dp"
+                            app:cardElevation="0.1dp">
+
+                            <cn.bingoogolapple.bgabanner.BGABanner
+                                android:id="@+id/bannerMiddle"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/dimen_100dp"
+                                app:banner_isNumberIndicator="false"
+                                app:banner_numberIndicatorBackground="@color/trans"
+                                app:banner_pointAutoPlayAble="true"
+                                app:banner_pointContainerBackground="@color/trans"/>
+
+                        </android.support.v7.widget.CardView>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dimen_10dp"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:id="@+id/llBk"
+                                android:layout_width="0dp"
+                                android:layout_height="@dimen/dimen_100dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/server_card"
+                                android:gravity="center_vertical"
+                                android:orientation="vertical"
+                                android:paddingStart="@dimen/dimen_20dp"
+                                android:paddingEnd="@dimen/dimen_20dp">
+
+                                <TextView
+                                    android:id="@+id/tvNameBK"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="项目百科"
+                                    android:textSize="@dimen/dimen_16sp"
+                                    android:textStyle="bold"/>
+
+                                <TextView
+                                    android:id="@+id/tvBKContent"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/dp_10"
+                                    android:ellipsize="end"
+                                    android:lines="1"
+                                    android:maxEms="10"
+                                    android:text="护肤千万种，适合才美好"
+                                    android:textColor="@color/color999"
+                                    android:textSize="@dimen/dimen_12sp"/>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/llSkin"
+                                android:layout_width="0dp"
+                                android:layout_height="@dimen/dimen_100dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/server_card"
+                                android:gravity="center_vertical"
+                                android:orientation="vertical"
+                                android:paddingStart="@dimen/dimen_20dp">
+
+                                <TextView
+                                    android:id="@+id/tvNameSkin"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="护肤百科"
+                                    android:textSize="@dimen/dimen_16sp"
+                                    android:textStyle="bold"/>
+
+                                <TextView
+                                    android:id="@+id/tvSkinContent"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/dp_10"
+                                    android:ellipsize="end"
+                                    android:lines="1"
+                                    android:maxEms="10"
+                                    android:text="护肤千万种，适合才美好"
+                                    android:textColor="@color/color999"
+                                    android:textSize="@dimen/dimen_12sp"/>
+                            </LinearLayout>
+
+                        </LinearLayout>
+                    </LinearLayout>
+                </ScrollView>
+
+                <com.scwang.smartrefresh.layout.footer.FalsifyFooter
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+            </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/flHistory"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <include layout="@layout/layout_refresh_white_nofoot"/>
+        </FrameLayout>
+    </FrameLayout>
+</LinearLayout>

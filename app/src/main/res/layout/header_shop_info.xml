@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <cn.bingoogolapple.bgabanner.BGABanner
+        android:id="@+id/banner"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:banner_indicatorGravity="bottom"
+        app:banner_pointContainerBackground="@color/trans"
+        app:banner_pointDrawable="@color/trans"
+        app:banner_pointTopBottomMargin="@dimen/dimen_10dp"
+        app:layout_constraintDimensionRatio="0.625:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/tvPos"
+        android:layout_width="@dimen/dimen_40dp"
+        android:layout_height="@dimen/dimen_22dp"
+        android:layout_margin="@dimen/dimen_15dp"
+        android:layout_marginBottom="@dimen/dimen_15dp"
+        android:alpha="0.8"
+        android:background="@drawable/shape_45_theme_gray_all"
+        android:text="0/0"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/llBtn"
+        app:layout_constraintEnd_toEndOf="@+id/banner"
+        app:layout_constraintTop_toTopOf="@+id/llBtn"/>
+
+    <!--<com.tencent.smtt.sdk.WebView-->
+    <!--android:visibility="invisible"-->
+    <!--android:id="@+id/webView"-->
+    <!--android:layout_width="0dp"-->
+    <!--android:layout_height="0dp"-->
+    <!--app:layout_constraintBottom_toBottomOf="@+id/banner"-->
+    <!--app:layout_constraintEnd_toEndOf="parent"-->
+    <!--app:layout_constraintStart_toStartOf="parent"-->
+    <!--app:layout_constraintTop_toTopOf="parent"/>-->
+
+    <com.wmtc.wmt.base.EmptyUiVideoPlayer
+        android:id="@+id/player"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/banner"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <LinearLayout
+        android:id="@+id/llBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dimen_30dp"
+        android:layout_marginBottom="@dimen/dimen_35dp"
+        app:layout_constraintBottom_toBottomOf="@+id/banner"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:id="@+id/tvVideo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/dimen_10dp"
+            android:background="@drawable/select_shopinfo_red_white"
+            android:paddingStart="@dimen/dimen_8dp"
+            android:paddingTop="@dimen/dimen_3dp"
+            android:paddingEnd="@dimen/dimen_8dp"
+            android:paddingBottom="@dimen/dimen_3dp"
+            android:text="视频"
+            android:textColor="@drawable/selector_text_red_white_select"/>
+
+        <TextView
+            android:id="@+id/tvVr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/dimen_10dp"
+            android:background="@drawable/select_shopinfo_red_white"
+            android:paddingStart="@dimen/dimen_12dp"
+            android:paddingTop="@dimen/dimen_3dp"
+            android:paddingEnd="@dimen/dimen_12dp"
+            android:paddingBottom="@dimen/dimen_3dp"
+            android:text="VR"
+            android:textColor="@drawable/selector_text_red_white_select"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/tvPic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/select_shopinfo_red_white"
+            android:enabled="false"
+            android:paddingStart="@dimen/dimen_8dp"
+            android:paddingTop="@dimen/dimen_3dp"
+            android:paddingEnd="@dimen/dimen_8dp"
+            android:paddingBottom="@dimen/dimen_3dp"
+            android:text="图片"
+            android:textColor="@drawable/selector_text_red_white_select"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvShopName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dimen_10dp"
+        android:layout_marginTop="@dimen/dimen_20dp"
+        android:layout_marginEnd="@dimen/dimen_10dp"
+        android:gravity="center_vertical"
+        android:text="@string/app_name"
+        android:textSize="@dimen/dimen_18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/banner"/>
+
+    <TextView
+        android:id="@+id/tvShopAverage"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dimen_10dp"
+        android:layout_marginTop="@dimen/dimen_10dp"
+        android:layout_marginEnd="@dimen/dimen_10dp"
+        android:gravity="center_vertical"
+        android:text="@string/app_name"
+        android:textColor="@color/color666"
+        android:textSize="@dimen/dimen_12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvShopName"/>
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginStart="@dimen/dimen_10dp"
+        android:layout_marginTop="@dimen/dimen_15dp"
+        android:layout_marginEnd="@dimen/dimen_10dp"
+        android:background="@drawable/shape_divider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvShopAverage"/>
+
+    <TextView
+        android:id="@+id/tvShopOpenTime"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dimen_10dp"
+        android:layout_marginTop="@dimen/dimen_30dp"
+        android:layout_marginEnd="@dimen/dimen_10dp"
+        android:gravity="center_vertical"
+        android:text="营业时间：6:00-18：00"
+        android:textColor="@color/color666"
+        android:textSize="@dimen/dimen_14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvShopAverage"/>
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginStart="@dimen/dimen_10dp"
+        android:layout_marginTop="@dimen/dimen_15dp"
+        android:layout_marginEnd="@dimen/dimen_10dp"
+        android:background="@drawable/shape_divider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvShopOpenTime"/>
+
+    <TextView
+        android:id="@+id/tvShopLocal"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dimen_10dp"
+        android:layout_marginTop="@dimen/dimen_30dp"
+        android:layout_marginEnd="@dimen/dimen_10dp"
+        android:drawableEnd="@drawable/right_arrow"
+        android:gravity="center_vertical"
+        android:text="市北区徐州北路13-2号利群宇恒大厦22D"
+        android:textSize="@dimen/dimen_14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvShopOpenTime"/>
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="10dp"
+        android:layout_marginTop="@dimen/dimen_15dp"
+        android:background="@drawable/shape_divider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvShopLocal"/>
+
+    <TextView
+        android:id="@+id/tvTipPro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dimen_10dp"
+        android:layout_marginTop="@dimen/dimen_40dp"
+        android:paddingBottom="@dimen/dimen_10dp"
+        android:text="预约"
+        android:textSize="@dimen/dimen_16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvShopLocal"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/dimen_10dp"
+        android:paddingBottom="@dimen/dimen_10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/tvTipPro"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tvTipPro">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="及时约"
+            android:textColor="@color/color666"
+            android:textSize="@dimen/dimen_11sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_10dp"
+            android:text="随时退"
+            android:textColor="@color/color666"
+            android:textSize="@dimen/dimen_11sp"/>
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>

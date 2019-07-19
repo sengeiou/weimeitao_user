@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="horizontal"
+              android:padding="@dimen/activity_horizontal_margin"
+              android:weightSum="4">
+
+
+    <LinearLayout
+        android:id="@+id/chat_function_photo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="@dimen/dimen_60dp"
+            android:layout_height="@dimen/dimen_60dp"
+            android:src="@drawable/icon_chat_photograph"/>
+
+        <TextView
+            style="@style/text_body"
+            android:layout_width="@dimen/dimen_80dp"
+            android:layout_marginTop="@dimen/dimen_10dp"
+            android:gravity="center"
+            android:text="摄像"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+
+        android:id="@+id/chat_function_photograph"
+
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="@dimen/dimen_60dp"
+            android:layout_height="@dimen/dimen_60dp"
+            android:src="@drawable/icon_chat_photo"/>
+
+        <TextView
+            style="@style/text_body"
+            android:layout_width="@dimen/dimen_80dp"
+            android:layout_marginTop="@dimen/dimen_10dp"
+            android:gravity="center"
+            android:text="相册"/>
+    </LinearLayout>
+
+</LinearLayout>

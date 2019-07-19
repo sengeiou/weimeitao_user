@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+    <TextView
+        android:id="@+id/tv_skin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="这是标签"
+        android:background="@drawable/skin_bg"
+        android:textColor="#FF0613"
+        android:textSize="@dimen/dimen_9sp"
+        android:paddingTop="@dimen/dimen_5dp"
+        android:paddingBottom="@dimen/dimen_5dp"
+        android:paddingLeft="@dimen/dimen_10dp"
+        android:paddingRight="@dimen/dimen_10dp"
+        android:layout_marginLeft="@dimen/dimen_10dp"/>
+
+</LinearLayout>
